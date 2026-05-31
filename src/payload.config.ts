@@ -31,9 +31,10 @@ export default buildConfig({
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
   db: postgresAdapter({
+    push: false,
     pool: {
       connectionString: databaseURI,
-      max: 1,
+      max: Number(process.env.DATABASE_POOL_MAX || 5),
       ssl: databaseSSL,
     },
   }),
