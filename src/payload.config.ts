@@ -10,6 +10,11 @@ import { Media } from './collections/Media'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
+const databaseURI = process.env.DATABASE_URI || process.env.DATABASE_URL || ''
+const databaseSSL = process.env.DATABASE_SSL === 'false' ? false : { rejectUnauthorized: false }
+const serverURL =
+  process.env.NEXT_PUBLIC_SERVER_URL ||
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : undefined)
 
 export default buildConfig({
   admin: {
@@ -21,14 +26,15 @@ export default buildConfig({
   collections: [Users, Media],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
+  serverURL,
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
   db: postgresAdapter({
     pool: {
-      connectionString: process.env.DATABASE_URI || '',
+      connectionString: databaseURI,
       max: 1,
-      ssl: { rejectUnauthorized: false },
+      ssl: databaseSSL,
     },
   }),
   sharp,
