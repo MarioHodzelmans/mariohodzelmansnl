@@ -1,6 +1,5 @@
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
-import fs from 'fs'
 import path from 'path'
 import { buildConfig } from 'payload'
 import { fileURLToPath } from 'url'
@@ -29,12 +28,8 @@ export default buildConfig({
     pool: {
       connectionString: process.env.DATABASE_URI || '',
       max: 1,
-      ssl: {
-        rejectUnauthorized: true,
-        ca: fs.readFileSync(path.resolve(dirname, '../prod-ca-2021.crt')).toString(),
-      },
+      ssl: { rejectUnauthorized: false },
     },
-    push: false,
   }),
   sharp,
   plugins: [],
