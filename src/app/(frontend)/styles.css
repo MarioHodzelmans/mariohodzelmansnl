@@ -1,5 +1,7 @@
 :root {
-  --font-mono: 'Roboto Mono', monospace;
+  --accent: #CCFF00;
+  --bg: #0A0A0A;
+  --text: #ffffff;
 }
 
 * {
