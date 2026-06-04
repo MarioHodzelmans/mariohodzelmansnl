@@ -26,7 +26,7 @@ export default function CTA() {
                         href={`/contact`}
                       >
                         <TextScramble className="btn-caption mxd-scramble">
-                          Write a line
+                          Schedule a Call
                         </TextScramble>
                       </Link>
                     </CommonScrollAnimated>
@@ -41,8 +41,9 @@ export default function CTA() {
                           className="permanent reveal-type"
                           animation="revealType"
                         >
-                          Let&apos;s talk about your project
+                          Let&apos;s Talk About The Next 5 Years
                         </CommonAnimatedText>
+                        <p className="t-large permanent">AI is changing how organizations operate. Let&apos;s figure out what that means for yours.</p>
                       </Link>
                     </div>
                   </div>

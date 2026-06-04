@@ -22,40 +22,40 @@ export default function Footer3({ name = "MARIO" }: { name?: string }) {
                     animation="slideDownLine"
                   >
                     <TextScramble className="mxd-scramble mxd-slide-down">
-                      Home
+                      / 01 Home
                     </TextScramble>
                   </CommonScrollAnimatedLink>
                 </li>
                 <li className="footer-nav-v01__item">
                   <CommonScrollAnimatedLink
                     className="anim-uni-slide-down"
-                    href={`/works-default`}
+                    href={`/works-grid-sticky`}
                     animation="slideDownLine"
                   >
                     <TextScramble className="mxd-scramble mxd-slide-down">
-                      Works
+                      / 02 Work
                     </TextScramble>
                   </CommonScrollAnimatedLink>
                 </li>
                 <li className="footer-nav-v01__item">
                   <CommonScrollAnimatedLink
                     className="anim-uni-slide-down"
-                    href={`/about-us`}
+                    href={`/about-me`}
                     animation="slideDownLine"
                   >
                     <TextScramble className="mxd-scramble mxd-slide-down">
-                      Studio
+                      / 03 About
                     </TextScramble>
                   </CommonScrollAnimatedLink>
                 </li>
                 <li className="footer-nav-v01__item">
                   <CommonScrollAnimatedLink
                     className="anim-uni-slide-down"
-                    href={`/services`}
+                    href={`/blog-standard`}
                     animation="slideDownLine"
                   >
                     <TextScramble className="mxd-scramble mxd-slide-down">
-                      Services
+                      / 04 Insights
                     </TextScramble>
                   </CommonScrollAnimatedLink>
                 </li>
@@ -66,7 +66,7 @@ export default function Footer3({ name = "MARIO" }: { name?: string }) {
                     animation="slideDownLine"
                   >
                     <TextScramble className="mxd-scramble mxd-slide-down">
-                      Contact
+                      / 05 Contact
                     </TextScramble>
                   </CommonScrollAnimatedLink>
                 </li>
@@ -80,6 +80,13 @@ export default function Footer3({ name = "MARIO" }: { name?: string }) {
           <div className="mxd-footer__footer-blocks">
             <div className="footer-blocks__column mxd-grid-item justify-start">
               <div className="footer-blocks__data justify-start">
+                <CommonScrollAnimated
+                  className="footer-data anim-uni-slide-down"
+                  as="p"
+                  animation="slideDownLine"
+                >
+                  <span>Mario Hodzelmans<br />AI Systems Architect<br />Director of Innovation &amp; Digital Strategy</span>
+                </CommonScrollAnimated>
                 <p className="footer-data">
                   <CommonScrollAnimated
                     className="anim-uni-slide-down"
@@ -97,7 +104,7 @@ export default function Footer3({ name = "MARIO" }: { name?: string }) {
                   as="p"
                   animation="slideDownLine"
                 >
-                  <span>50.882419° N, 5.924062° E</span>
+                  <span>Voerendaal, Limburg<br />The Netherlands<br />50.882419° N, 5.924062° E</span>
                 </CommonScrollAnimated>
               </div>
             </div>
@@ -109,7 +116,7 @@ export default function Footer3({ name = "MARIO" }: { name?: string }) {
                   animation="slideDownLine"
                 >
                   <span className="mxd-slide-down">
-                    ©{new Date().getFullYear()}
+                    AI Systems Architect
                   </span>
                 </CommonScrollAnimated>
                 <CommonScrollAnimated
@@ -118,7 +125,7 @@ export default function Footer3({ name = "MARIO" }: { name?: string }) {
                   animation="slideDownLine"
                 >
                   <span className="mxd-slide-down">
-                    Copyright Mario Hodzelmans. All rights reserved
+                    ©2026 Mario Hodzelmans. All rights reserved.
                   </span>
                 </CommonScrollAnimated>
               </div>

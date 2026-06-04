@@ -7,9 +7,9 @@ import MarqueeDivider from '@/components/homes/index-design-studio/MarqueeDivide
 import BlogPreview from '@/components/homes/index-design-studio/BlogPreview'
 import CTA from '@/components/homes/index-design-studio/CTA'
 export const metadata: Metadata = {
-  title: 'Mario Hodzelmans | AI, Strategy & Intelligent Systems',
+  title: 'Mario Hodzelmans | AI Systems Architect',
   description:
-    'Helping businesses navigate the future through AI, strategy and intelligent systems.',
+    'I help organizations transform complexity into intelligent systems.',
 }
 export default function IndexDesignStudioPage() {
   return (

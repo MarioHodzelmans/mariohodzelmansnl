@@ -6,20 +6,20 @@ import {
 } from "@/components/animations/CommonGravitySection";
 
 const ITEMS = [
-  "Web design",
-  "Brand strategy",
-  "3D Models",
-  "Interactions",
-  "IU/UX",
-  "Guidelines",
-  "App design",
-  "Packaging",
-  "Development",
-  "Print Design",
-  "Branding",
-  "Applications",
-  "Visual identity",
-  "Logo design",
+  "AI Strategy",
+  "Automation",
+  "Knowledge Systems",
+  "AI Agents",
+  "Digital Transformation",
+  "Systems Design",
+  "Decision Support",
+  "Business Intelligence",
+  "E-Commerce",
+  "Innovation",
+  "Digital Operations",
+  "Growth Strategy",
+  "Process Automation",
+  "Intelligent Systems",
 ];
 
 export default function CommonGravityPermanentObjects() {

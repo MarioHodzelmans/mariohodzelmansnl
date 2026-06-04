@@ -17,25 +17,13 @@ export const homeLinks: MenuLinkItem[] = [
 ];
 
 export const worksLinks: MenuLinkItem[] = [
-  { href: "/works-default", label: "Works default" },
-  { href: "/works-grid", label: "Works grid" },
-  { href: "/works-grid-sticky", label: "Works grid sticky" },
-  { href: "/project-details", label: "Project details" },
+  { href: "/works-grid-sticky", label: "Work" },
 ];
 
 export const pageLinks: MenuLinkItem[] = [
-  { href: "/about-me", label: "About me" },
-  { href: "/about-us", label: "About us" },
-  { href: "/services", label: "Services" },
-  { href: "/team", label: "Our team" },
-  { href: "/pricing", label: "Pricing" },
-  { href: "/faq", label: "FAQ page" },
-  { href: "/404", label: "404 error page" },
-  { href: "/", label: "Landing page" },
+  { href: "/about-me", label: "About" },
 ];
 
 export const insightLinks: MenuLinkItem[] = [
-  { href: "/blog-standard", label: "Blog standard" },
-  { href: "/blog-creative", label: "Blog creative" },
-  { href: "/blog-article", label: "Single post" },
+  { href: "/blog-standard", label: "Insights" },
 ];

@@ -3,14 +3,11 @@ import { homeLinks, insightLinks, worksLinks } from "@/data/menu";
 
 /** Inner routes shown under “/ Inner pages” (subset of site; excludes landing home `/`). */
 export const footer1InnerPageLinks: MenuLinkItem[] = [
-  { href: "/about-me", label: "About me" },
-  { href: "/about-us", label: "About us" },
-  { href: "/services", label: "Services" },
-  { href: "/team", label: "Our team" },
-  { href: "/pricing", label: "Pricing" },
-  { href: "/faq", label: "FAQ page" },
-  { href: "/404", label: "404 error page" },
-  { href: "/contact", label: "Contact" },
+  { href: "/", label: "/ 01 Home" },
+  { href: "/works-grid-sticky", label: "/ 02 Work" },
+  { href: "/about-me", label: "/ 03 About" },
+  { href: "/blog-standard", label: "/ 04 Insights" },
+  { href: "/contact", label: "/ 05 Contact" },
 ];
 
 export type Footer1NavBlock = {

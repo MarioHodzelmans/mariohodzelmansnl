@@ -43,35 +43,35 @@ export default function Hero() {
                         <CommonLoadItem index={0}>
                           <li className="loading-item">
                             <TextScramble className="tag tag-s-mobile tag-permanent-medium mxd-scramble">
-                              Strategy
+                              AI Strategy
                             </TextScramble>
                           </li>
                         </CommonLoadItem>
                         <CommonLoadItem index={1}>
                           <li className="loading-item">
                             <TextScramble className="tag tag-s-mobile tag-permanent-medium mxd-scramble">
-                              Innovation
+                              Automation
                             </TextScramble>
                           </li>
                         </CommonLoadItem>
                         <CommonLoadItem index={2}>
                           <li className="loading-item">
                             <TextScramble className="tag tag-s-mobile tag-permanent-medium mxd-scramble">
-                              AI
+                              Digital Transformation
                             </TextScramble>
                           </li>
                         </CommonLoadItem>
                         <CommonLoadItem index={3}>
                           <li className="loading-item">
                             <TextScramble className="tag tag-s-mobile tag-permanent-medium mxd-scramble">
-                              Design
+                              Knowledge Systems
                             </TextScramble>
                           </li>
                         </CommonLoadItem>
                         <CommonLoadItem index={4}>
                           <li className="loading-item">
                             <TextScramble className="tag tag-s-mobile tag-permanent-medium mxd-scramble">
-                              Development
+                              E-Commerce Architecture
                             </TextScramble>
                           </li>
                         </CommonLoadItem>
@@ -82,28 +82,28 @@ export default function Hero() {
                         <CommonLoadItem index={5}>
                           <li className="loading-item">
                             <TextScramble className="tag tag-s-mobile tag-permanent-medium mxd-scramble">
-                              Automation
+                              Innovation Management
                             </TextScramble>
                           </li>
                         </CommonLoadItem>
                         <CommonLoadItem index={6}>
                           <li className="loading-item">
                             <TextScramble className="tag tag-s-mobile tag-permanent-medium mxd-scramble">
-                              Branding
+                              Business Intelligence
                             </TextScramble>
                           </li>
                         </CommonLoadItem>
                         <CommonLoadItem index={7}>
                           <li className="loading-item">
                             <TextScramble className="tag tag-s-mobile tag-permanent-medium mxd-scramble">
-                              E-Commerce
+                              Systems Design
                             </TextScramble>
                           </li>
                         </CommonLoadItem>
                         <CommonLoadItem index={8}>
                           <li className="loading-item">
                             <TextScramble className="tag tag-s-mobile tag-permanent-medium mxd-scramble">
-                              Performance
+                              AI Agents
                             </TextScramble>
                           </li>
                         </CommonLoadItem>
@@ -123,9 +123,9 @@ export default function Hero() {
                       className="medium permanent loading-split"
                       animation="splitLinesLoad"
                     >
-                      Building the
+                      Turning Complexity Into
                       <br />
-                      AI-Driven Businesses of Tomorrow
+                      Intelligent Systems
                     </CommonAnimatedText>
                   </div>
                 </div>
@@ -137,9 +137,11 @@ export default function Hero() {
                       className="t-bold t-permanent loading-split"
                       animation="splitLinesLoad"
                     >
-                      Helping businesses navigate the future
+                      AI Strategy. Automation. Digital Transformation.
+                      <br />
                       <span>
-                        through AI, strategy and intelligent systems.
+                        Helping organizations prepare for the future through AI,
+                        strategy, automation and intelligent systems.
                       </span>
                     </CommonAnimatedText>
                   </div>

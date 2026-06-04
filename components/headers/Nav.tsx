@@ -119,9 +119,9 @@ export default function Nav({
               <div className="mxd-menu__shadow shadow-top" />
               <div className="mxd-menu__caption">
                 <p ref={headerSlots[2]}>
-                  Helping businesses navigate the future
+                  I help organizations transform complexity
                   <br />
-                  through AI, strategy and intelligent systems.
+                  into intelligent systems.
                 </p>
               </div>
               {/* left side */}
@@ -174,7 +174,7 @@ export default function Nav({
                               ref={mainSlots[3]}
                               className="main-menu__caption"
                             >
-                              Works
+                              Work
                             </span>
                           </Link>
                         </div>
@@ -199,7 +199,7 @@ export default function Nav({
                               ref={mainSlots[5]}
                               className="main-menu__caption"
                             >
-                              About Me
+                              About
                             </span>
                           </Link>
                         </div>
@@ -414,7 +414,7 @@ export default function Nav({
                 </div>
                 <div className="menu-data__right">
                   <p ref={footerSlots[2]} className="menu-data__text">
-                    Copyright Mario Hodzelmans
+                    AI Systems Architect
                   </p>
                   <p ref={footerSlots[3]} className="menu-data__text">
                     ©{new Date().getFullYear()}
