@@ -7,6 +7,8 @@ import { fileURLToPath } from 'url'
 
 import { Media } from './payload/collections/Media.ts'
 import { Users } from './payload/collections/Users.ts'
+import { Blogs } from './payload/collections/Blogs.ts'
+import { fallbackBlogPosts } from './lib/blogModels.ts'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -26,9 +28,43 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media],
+  collections: [Users, Media, Blogs],
+  onInit: async (payload) => {
+    if (process.env.PAYLOAD_SEED_BLOGS === 'false') {
+      return
+    }
+
+    try {
+      const existingBlogs = await payload.find({
+        collection: 'blogs',
+        limit: 1,
+      })
+
+      if (existingBlogs.totalDocs > 0) {
+        return
+      }
+
+      for (const post of fallbackBlogPosts) {
+        await payload.create({
+          collection: 'blogs',
+          data: {
+            title: post.title,
+            slug: post.slug,
+            excerpt: post.excerpt,
+            publishedAt: post.publishedAt,
+            readTime: post.readTime,
+            featured: post.featured || false,
+            status: 'published',
+            categories: post.categories.map((label) => ({ label })),
+          },
+        })
+      }
+    } catch (error) {
+      payload.logger.warn({ err: error }, 'Skipping automatic blog seed')
+    }
+  },
   db: postgresAdapter({
-    push: false,
+    push: process.env.PAYLOAD_DB_PUSH === 'false' ? false : true,
     pool: {
       connectionString: databaseURI,
       max: Number(process.env.DATABASE_POOL_MAX || 5),

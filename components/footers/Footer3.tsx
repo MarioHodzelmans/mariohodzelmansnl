@@ -55,7 +55,7 @@ export default function Footer3({ name = "MARIO" }: { name?: string }) {
                     animation="slideDownLine"
                   >
                     <TextScramble className="mxd-scramble mxd-slide-down">
-                      / 04 Insights
+                      / 04 Blog
                     </TextScramble>
                   </CommonScrollAnimatedLink>
                 </li>

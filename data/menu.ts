@@ -25,5 +25,5 @@ export const pageLinks: MenuLinkItem[] = [
 ];
 
 export const insightLinks: MenuLinkItem[] = [
-  { href: "/blog-standard", label: "Insights" },
+  { href: "/blog-standard", label: "Blog" },
 ];

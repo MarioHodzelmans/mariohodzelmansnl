@@ -28,7 +28,7 @@ export default function InnerHeadline() {
                                 </TextScramble>
                               </Link>
                             </span>
-                            <span className="current-item">Insights </span>
+                            <span className="current-item">Blog </span>
                           </div>
                         </div>
                       </CommonLoadFade>
@@ -42,18 +42,17 @@ export default function InnerHeadline() {
                               <CommonLoadItem index={0}>
                                 <div className="inner-headline__title pre-subtitle-large loading-item">
                                   <h1 className="large">
-                                    Journal<sup>(34)</sup>
+                                    Blog<sup>(CMS)</sup>
                                   </h1>
                                 </div>
                               </CommonLoadItem>
                               <CommonLoadItem index={1}>
                                 <div className="inner-headline__subtitle loading-item">
                                   <p>
-                                    Dive into the latest trends, uncover
-                                    industry insights, explore practical advice{" "}
+                                    Practical notes on AI strategy, automation,
+                                    knowledge systems and digital transformation{" "}
                                     <span>
-                                      designed to thrive in the ever-evolving
-                                      digital landscape.
+                                      for organizations preparing for intelligent systems.
                                     </span>
                                   </p>
                                 </div>
@@ -64,7 +63,7 @@ export default function InnerHeadline() {
                                 <CommonLoadItem index={2}>
                                   <a className="loading-item" href="#0">
                                     <TextScramble className="tag tag-m meta-tag mxd-scramble">
-                                      Midjourney
+                                      AI Strategy
                                     </TextScramble>
                                   </a>
                                 </CommonLoadItem>
@@ -78,49 +77,49 @@ export default function InnerHeadline() {
                                 <CommonLoadItem index={4}>
                                   <a className="loading-item" href="#0">
                                     <TextScramble className="tag tag-m meta-tag mxd-scramble">
-                                      Editorial
+                                      Automation
                                     </TextScramble>
                                   </a>
                                 </CommonLoadItem>
                                 <CommonLoadItem index={5}>
                                   <a className="loading-item" href="#0">
                                     <TextScramble className="tag tag-m meta-tag mxd-scramble">
-                                      Design
+                                      Knowledge Systems
                                     </TextScramble>
                                   </a>
                                 </CommonLoadItem>
                                 <CommonLoadItem index={6}>
                                   <a className="loading-item" href="#0">
                                     <TextScramble className="tag tag-m meta-tag mxd-scramble">
-                                      Web Experience
+                                      Digital Transformation
                                     </TextScramble>
                                   </a>
                                 </CommonLoadItem>
                                 <CommonLoadItem index={7}>
                                   <a className="loading-item" href="#0">
                                     <TextScramble className="tag tag-m meta-tag mxd-scramble">
-                                      Branding
+                                      AI Agents
                                     </TextScramble>
                                   </a>
                                 </CommonLoadItem>
                                 <CommonLoadItem index={8}>
                                   <a className="loading-item" href="#0">
                                     <TextScramble className="tag tag-m meta-tag mxd-scramble">
-                                      UI/UX
+                                      E-Commerce
                                     </TextScramble>
                                   </a>
                                 </CommonLoadItem>
                                 <CommonLoadItem index={9}>
                                   <a className="loading-item" href="#0">
                                     <TextScramble className="tag tag-m meta-tag mxd-scramble">
-                                      Frontend
+                                      Operations
                                     </TextScramble>
                                   </a>
                                 </CommonLoadItem>
                                 <CommonLoadItem index={10}>
                                   <a className="loading-item" href="#0">
                                     <TextScramble className="tag tag-m meta-tag mxd-scramble">
-                                      Motion
+                                      Strategy
                                     </TextScramble>
                                   </a>
                                 </CommonLoadItem>

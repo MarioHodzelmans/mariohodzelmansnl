@@ -6,7 +6,7 @@ export const footer1InnerPageLinks: MenuLinkItem[] = [
   { href: "/", label: "/ 01 Home" },
   { href: "/works-grid-sticky", label: "/ 02 Work" },
   { href: "/about-me", label: "/ 03 About" },
-  { href: "/blog-standard", label: "/ 04 Insights" },
+  { href: "/blog-standard", label: "/ 04 Blog" },
   { href: "/contact", label: "/ 05 Contact" },
 ];
 

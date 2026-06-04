@@ -224,7 +224,7 @@ export default function Nav({
                               ref={mainSlots[7]}
                               className="main-menu__caption"
                             >
-                              Insights
+                              Blog
                             </span>
                           </Link>
                         </div>
