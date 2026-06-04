@@ -1,63 +1,36 @@
-# mariohodzelmans.nl Payload CMS
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Payload CMS runs inside this Next.js app. The admin panel is available at `/admin` and the API routes are available under `/api`.
+## Getting Started
 
-## Local setup
-
-1. Install dependencies:
-
-   ```bash
-   npm install
-   ```
-
-2. Copy the example environment file:
-
-   ```bash
-   cp .env.example .env
-   ```
-
-3. Fill in the environment variables:
-
-   ```bash
-   DATABASE_URI=postgresql://postgres.<project-ref>:<password>@aws-0-<region>.pooler.supabase.com:6543/postgres
-   PAYLOAD_SECRET=<long-random-secret>
-   NEXT_PUBLIC_SERVER_URL=http://localhost:3000
-   ```
-
-   `DATABASE_URL` is also supported, but `DATABASE_URI` is the preferred name in this project.
-
-4. Start development:
-
-   ```bash
-   npm run dev
-   ```
-
-5. Open `http://localhost:3000/admin` and create the first Payload admin user.
-
-## Vercel deployment
-
-Set these environment variables in Vercel for Production and Development:
-
-```bash
-DATABASE_URI=<your Supabase transaction pooler connection string>
-PAYLOAD_SECRET=<long-random-secret>
-NEXT_PUBLIC_SERVER_URL=https://mariohodzelmans.nl
-```
-
-The default Vercel build command can stay `npm run build`. Payload migrations are committed in `src/migrations` and should be applied before deploying schema changes.
-
-## Supabase notes
-
-The direct Supabase Postgres URL is IPv6-only for this project and Vercel build cannot reach it. Use Supabase's pooler connection string for Vercel.
-
-This template includes a `media` upload collection. Vercel has an ephemeral filesystem, so production uploads should be moved to persistent storage such as Supabase Storage/S3 before relying on uploaded files.
-
-## Useful commands
+First, run the development server:
 
 ```bash
 npm run dev
-npm run build
-npm run lint
-npm run payload -- migrate:create <name>
-npm run payload -- migrate:status
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

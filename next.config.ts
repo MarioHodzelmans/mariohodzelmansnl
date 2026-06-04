@@ -10,9 +10,15 @@ const nextConfig: NextConfig = {
   images: {
     localPatterns: [
       {
+        pathname: '/img/**',
+      },
+      {
         pathname: '/api/media/file/**',
       },
     ],
+  },
+  turbopack: {
+    root: path.resolve(dirname),
   },
   webpack: (webpackConfig) => {
     webpackConfig.resolve.extensionAlias = {
@@ -22,9 +28,6 @@ const nextConfig: NextConfig = {
     }
 
     return webpackConfig
-  },
-  turbopack: {
-    root: path.resolve(dirname),
   },
 }
 

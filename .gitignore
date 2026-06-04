@@ -41,6 +41,10 @@ next-env.d.ts
 .env
 
 /media
+/.payload
+/site
+/nul
+nul.map
 
 # Playwright
 node_modules/
