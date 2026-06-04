@@ -13,7 +13,7 @@ const stack = [
 
 export default function Partners() {
   return (
-    <BlurSection className="mxd-section padding-top-title padding-bottom-tag-m">
+    <BlurSection className="mxd-section ai-stack-section padding-top-title padding-bottom-tag-m">
       <div className="mxd-container grid-l-container">
         <div className="mxd-block">
           <div className="container-fluid p-0">
@@ -27,14 +27,14 @@ export default function Partners() {
                 </div>
               </div>
               <div className="col-12 col-xl-8">
-                <div className="mxd-clients">
+                <div className="mxd-clients ai-stack-grid">
                   <div className="mxd-clients__row">
                     <div className="container-fluid p-0">
                       <div className="row g-0">
                         {stack.map(([title, tools, description]) => (
                           <CommonCardBatchAnimated key={title} className="col-12 col-lg-4 mxd-clients__item mxd-grid-item animate-card-3" as="div" columns={3}>
-                            <div className="mxd-clients__logo"><h3>{title}</h3></div>
-                            <div className="mxd-clients__descr"><p className="t-bold">{tools}</p><p className="t-medium">{description}</p></div>
+                            <div className="mxd-clients__logo ai-stack-card__title"><h3>{title}</h3></div>
+                            <div className="mxd-clients__descr ai-stack-card__content"><p className="t-bold ai-stack-card__tools">{tools}</p><p className="t-medium">{description}</p></div>
                           </CommonCardBatchAnimated>
                         ))}
                       </div>
