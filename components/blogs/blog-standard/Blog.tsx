@@ -25,9 +25,9 @@ export default function Blog({ posts }: BlogProps) {
               <div className="mxd-posts-container mxd-grid-item">
                 {featured ? (
                   <article className="mxd-post post-featured">
-                    <Link className="post-featured__container active-cursor-permanent" data-cursor-text="Read Post" href="/blog-article">
+                    <Link className="post-featured__container active-cursor-permanent" data-cursor-text="Read Post" href="/blog-standard">
                       <div className="post-featured__thumb">
-                        <Image alt={featured.title} src={featured.image} width={1400} height={900} />
+                        <Image alt="" src={featured.image} width={1400} height={900} />
                         <div className="post-featured__cover" />
                       </div>
                       <div className="post-featured__content">
@@ -59,7 +59,7 @@ export default function Blog({ posts }: BlogProps) {
                         className="post-simple__container active-cursor-image active-cursor-permanent"
                         data-cursor-image={post.image}
                         data-cursor-text="Read Post"
-                        href="/blog-article"
+                        href="/blog-standard"
                       >
                         <div className="container-fluid px-0 post-simple__inner">
                           <div className="row gx-0">
@@ -109,7 +109,7 @@ export default function Blog({ posts }: BlogProps) {
                     {posts.slice(0, 3).map((post) => (
                       <li className="recent-post__item" key={post.slug}>
                         <div className="recent-post__thumb">
-                          <Link href="/blog-article"><Image alt={post.title} src={post.image} width={300} height={300} /></Link>
+                          <Link href="/blog-standard"><Image alt="" src={post.image} width={300} height={300} /></Link>
                         </div>
                         <div className="recent-post__content">
                           <div className="recent-post__meta">
@@ -117,7 +117,7 @@ export default function Blog({ posts }: BlogProps) {
                               <a href="#0" key={category}><TextScramble className="meta-tag tag-s comma-tag mxd-scramble">{category}</TextScramble></a>
                             ))}
                           </div>
-                          <div className="recent-post__title"><Link href="/blog-article">{post.title}</Link></div>
+                          <div className="recent-post__title"><Link href="/blog-standard">{post.title}</Link></div>
                         </div>
                       </li>
                     ))}
