@@ -9,6 +9,12 @@
   height: auto !important;
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden !important;
+}
+
 /* Services stack: main.css .line { translateY(100%) } applies vendor-prefixed transforms; GSAP’s
    y uses unprefixed transform — boxes and painted text desync. Neutralize so only inline GSAP owns y. */
 .mxd-stack-services .services-card__title .line,
@@ -157,6 +163,7 @@
   min-height: 4.2rem;
   font-size: 1.4rem;
   color: var(--t-bright);
+  overflow-wrap: anywhere;
 }
 
 @media only screen and (min-width: 992px) {
@@ -168,11 +175,23 @@
 @media only screen and (max-width: 991px) {
   .ai-stack-grid .mxd-clients__item {
     min-height: auto;
-    padding: 3rem 0;
+    padding: 3rem;
   }
 
   .ai-stack-grid .mxd-clients__logo.ai-stack-card__title,
   .ai-stack-grid .ai-stack-card__tools {
     min-height: auto;
   }
+}
+
+.mxd-section:has(.marquee-left--gsap),
+.mxd-section:has(.marquee-right--gsap) {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+.marquee-left--gsap,
+.marquee-right--gsap {
+  contain: paint;
+  overflow: clip;
 }
