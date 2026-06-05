@@ -47,3 +47,8 @@ export async function getBlogPosts(limit = 10): Promise<BlogPostSummary[]> {
     return fallbackBlogPosts.slice(0, limit)
   }
 }
+
+export async function getBlogPostBySlug(slug: string): Promise<BlogPostSummary | null> {
+  const posts = await getBlogPosts(50)
+  return posts.find((post) => post.slug === slug) || null
+}

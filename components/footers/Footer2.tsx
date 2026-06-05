@@ -34,7 +34,7 @@ export default function Footer2({ name = "MARIO" }: { name?: string }) {
                               <li>
                                 <CommonScrollAnimatedLink
                                   className="anim-uni-slide-down"
-                                  href={`/index-creative-agency`}
+                                  href={`/`}
                                   animation="slideDownLine"
                                 >
                                   <span>Home</span>
@@ -43,37 +43,19 @@ export default function Footer2({ name = "MARIO" }: { name?: string }) {
                               <li>
                                 <CommonScrollAnimatedLink
                                   className="anim-uni-slide-down"
-                                  href={`/about-us`}
+                                  href={`/about-me`}
                                   animation="slideDownLine"
                                 >
-                                  <span>About us</span>
+                                  <span>About</span>
                                 </CommonScrollAnimatedLink>
                               </li>
                               <li>
                                 <CommonScrollAnimatedLink
                                   className="anim-uni-slide-down"
-                                  href={`/works-default`}
+                                  href={`/works-grid-sticky`}
                                   animation="slideDownLine"
                                 >
-                                  <span>Case studies</span>
-                                </CommonScrollAnimatedLink>
-                              </li>
-                              <li>
-                                <CommonScrollAnimatedLink
-                                  className="anim-uni-slide-down"
-                                  href={`/services`}
-                                  animation="slideDownLine"
-                                >
-                                  <span>Services</span>
-                                </CommonScrollAnimatedLink>
-                              </li>
-                              <li>
-                                <CommonScrollAnimatedLink
-                                  className="anim-uni-slide-down"
-                                  href={`/team`}
-                                  animation="slideDownLine"
-                                >
-                                  <span>Our team</span>
+                                  <span>Work</span>
                                 </CommonScrollAnimatedLink>
                               </li>
                               <li>
@@ -82,7 +64,7 @@ export default function Footer2({ name = "MARIO" }: { name?: string }) {
                                   href={`/blog-standard`}
                                   animation="slideDownLine"
                                 >
-                                  <span>Insights</span>
+                                  <span>Blog</span>
                                 </CommonScrollAnimatedLink>
                               </li>
                               <li>
@@ -124,39 +106,7 @@ export default function Footer2({ name = "MARIO" }: { name?: string }) {
                             </ul>
                           </div>
                         </div>
-                        <div className="mxd-footer-nav02__block">
-                          <div className="mxd-footer-nav02__title">
-                            <CommonScrollAnimated
-                              className="footer-data anim-uni-slide-down"
-                              as="p"
-                              animation="slideDownLine"
-                            >
-                              <span>/ Info</span>
-                            </CommonScrollAnimated>
-                          </div>
-                          <div className="mxd-footer-nav02__list">
-                            <ul>
-                              <li>
-                                <CommonScrollAnimatedLink
-                                  className="anim-uni-slide-down"
-                                  href={`/pricing`}
-                                  animation="slideDownLine"
-                                >
-                                  <span>Pricing</span>
-                                </CommonScrollAnimatedLink>
-                              </li>
-                              <li>
-                                <CommonScrollAnimatedLink
-                                  className="anim-uni-slide-down"
-                                  href={`/faq`}
-                                  animation="slideDownLine"
-                                >
-                                  <span>FAQ</span>
-                                </CommonScrollAnimatedLink>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
+                        
                       </div>
                     </div>
                   </div>

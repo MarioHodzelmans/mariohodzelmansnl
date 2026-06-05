@@ -27,7 +27,7 @@ export default function CTAWithMarquee() {
                         href={`/contact`}
                       >
                         <TextScramble className="btn-caption mxd-scramble">
-                          Write a line
+                          Contact Mario
                         </TextScramble>
                       </Link>
                     </CommonScrollAnimated>
@@ -42,9 +42,11 @@ export default function CTAWithMarquee() {
                           className="mxd-split-lines permanent"
                           animation="splitLines"
                         >
-                          Let&apos;s talk about your project
+                          Let&apos;s build something intelligent
                         </CommonAnimatedText>
                       </Link>
+                      <p className="mt-3 t-medium">Have a digital challenge, AI idea, or workflow that needs structure? Let&apos;s turn it into a system that works.</p>
+                      <p className="mt-2">mariohodzelmans@gmail.com</p>
                     </div>
                   </div>
                 </div>

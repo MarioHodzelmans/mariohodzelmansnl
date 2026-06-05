@@ -46,13 +46,13 @@ export default function BlogPreviewClient({ posts }: BlogPreviewClientProps) {
                       <Link
                         className="mxd-blog-item__media active-cursor-permanent"
                         data-cursor-text="Read Post"
-                        href="/blog-standard"
+                        href={`/blog-article/${post.slug}`}
                       >
                         <Image alt="" src={post.image} width={1200} height={800} />
                       </Link>
                       <div className="mxd-blog-item__caption">
                         <div className="mxd-blog-item__title">
-                          <Link className="blog-name-m" href="/blog-standard">
+                          <Link className="blog-name-m" href={`/blog-article/${post.slug}`}>
                             {post.title}
                           </Link>
                         </div>

@@ -34,21 +34,18 @@ export default function StatisticsLines() {
                     <div className="col-12 col-xl-8 mxd-grid-item">
                       {/* Manifest Start */}
                       <div className="mxd-section-title__manifest title-manifest-s no-padding-mobile">
-                        <a data-cursor-text="Download CV" href="#0">
-                          <CommonAnimatedText
-                            as="span"
-                            className="manifest manifest-s mxd-split-lines active-cursor-accent"
-                            animation="splitLines"
-                          >
-                            Web design is evolving rapidly, and I strive to stay
-                            ahead.
+                          <a data-cursor-text="Download CV" href="#0">
+                            <CommonAnimatedText
+                              as="span"
+                              className="manifest manifest-s mxd-split-lines active-cursor-accent"
+                              animation="splitLines"
+                            >
+                            My background combines communication, multimedia design, e-commerce operations, AI experimentation, and hands-on system building.
                             <span>
-                              Emerging tools and technologies enable me to
-                              create visually stunning and seamlessly functional
-                              websites.
+                              I translate messy digital challenges into practical structures teams can actually use.
                             </span>
-                          </CommonAnimatedText>
-                        </a>
+                            </CommonAnimatedText>
+                          </a>
                       </div>
                       {/* Manifest End */}
                       {/* Statistics Lines Start */}
@@ -56,37 +53,37 @@ export default function StatisticsLines() {
                         {/* statistics single item */}
                         <MxdStatsLineItem>
                           <div className="mxd-stats-lines__number">
-                            <p id="stats-counter-1">40+</p>
+                            <p id="stats-counter-1">14+</p>
                           </div>
                           <div className="mxd-stats-lines__caption">
-                            <p>Happy clients who trust my work</p>
+                            <p>Years of freelance and digital experience</p>
                           </div>
                         </MxdStatsLineItem>
                         {/* statistics single item */}
                         <MxdStatsLineItem>
                           <div className="mxd-stats-lines__number">
-                            <p id="stats-counter-2">86%</p>
+                            <p id="stats-counter-2">11+</p>
                           </div>
                           <div className="mxd-stats-lines__caption">
-                            <p>Clients come back for a new projects</p>
+                            <p>Years in e-commerce management</p>
                           </div>
                         </MxdStatsLineItem>
                         {/* statistics single item */}
                         <MxdStatsLineItem>
                           <div className="mxd-stats-lines__number">
-                            <p id="stats-counter-3">3+</p>
+                            <p id="stats-counter-3">30+</p>
                           </div>
                           <div className="mxd-stats-lines__caption">
-                            <p>Years of professional experience</p>
+                            <p>Websites and platforms managed</p>
                           </div>
                         </MxdStatsLineItem>
                         {/* statistics single item */}
                         <MxdStatsLineItem>
                           <div className="mxd-stats-lines__number">
-                            <p id="stats-counter-4">50+</p>
+                            <p id="stats-counter-4">2026</p>
                           </div>
                           <div className="mxd-stats-lines__caption">
-                            <p>Successfully completed projects</p>
+                            <p>Director Innovation &amp; Digital Strategy</p>
                           </div>
                         </MxdStatsLineItem>
                       </div>

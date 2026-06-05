@@ -8,8 +8,8 @@ import ParallaxDividerImage2 from "@/components/other-pages/about-me/ParallaxDiv
 import TestimonialsSlider from "@/components/other-pages/about-me/TestimonialsSlider";
 import CTAWithMarquee from "@/components/other-pages/about-me/CTAWithMarquee";
 export const metadata: Metadata = {
-  title: "About Me | Azurio - Digital Agency & Portfolio NextJs Template",
-  description: "Azurio - Digital Agency & Portfolio NextJs Template",
+  title: "About Mario Hodzelmans | AI Systems Architect",
+  description: "Mario Hodzelmans helps organizations transform complexity into intelligent systems.",
 };
 export default function AboutMePage() {
   return (
