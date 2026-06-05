@@ -6,8 +6,8 @@ import ParallaxDividerVideo from "@/components/projects/works-default/ParallaxDi
 import TestimonialsSticky from "@/components/projects/works-default/TestimonialsSticky";
 import CTAWithMarquee from "@/components/projects/works-default/CTAWithMarquee";
 export const metadata: Metadata = {
-  title: "Works Default | Azurio - Digital Agency & Portfolio NextJs Template",
-  description: "Azurio - Digital Agency & Portfolio NextJs Template",
+  title: "Cases | Mario Hodzelmans",
+  description: "Mario Hodzelmans | AI Systems Architect",
 };
 export default function WorksDefaultPage() {
   return (

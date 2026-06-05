@@ -12,8 +12,8 @@ import NextProjectLink from "@/components/projects/project-details/NextProjectLi
 import CTAWithMarquee from "@/components/projects/project-details/CTAWithMarquee";
 export const metadata: Metadata = {
   title:
-    "Project Details | Azurio - Digital Agency & Portfolio NextJs Template",
-  description: "Azurio - Digital Agency & Portfolio NextJs Template",
+    "Project Details | Mario Hodzelmans | AI Systems Architect",
+  description: "Mario Hodzelmans | AI Systems Architect",
 };
 export default function ProjectDetailsPage() {
   return (

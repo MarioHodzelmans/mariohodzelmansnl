@@ -14,8 +14,8 @@ import BlogPreview from "@/components/homes/index-personal-portfolio/BlogPreview
 import CTA from "@/components/homes/index-personal-portfolio/CTA";
 export const metadata: Metadata = {
   title:
-    "Index Personal Portfolio | Azurio - Digital Agency & Portfolio NextJs Template",
-  description: "Azurio - Digital Agency & Portfolio NextJs Template",
+    "Index Personal Portfolio | Mario Hodzelmans | AI Systems Architect",
+  description: "Mario Hodzelmans | AI Systems Architect",
 };
 export default function IndexPersonalPortfolioPage() {
   return (

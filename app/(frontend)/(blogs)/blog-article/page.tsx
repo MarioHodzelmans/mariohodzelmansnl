@@ -4,8 +4,8 @@ import MoreOnTopic from "@/components/blogs/blog-article/MoreOnTopic";
 import CTAWithMarquee from "@/components/blogs/blog-article/CTAWithMarquee";
 import { getBlogPosts } from "@/lib/blogs";
 export const metadata: Metadata = {
-  title: "Blog Article | Azurio - Digital Agency & Portfolio NextJs Template",
-  description: "Azurio - Digital Agency & Portfolio NextJs Template",
+  title: "Blog Article | Mario Hodzelmans | AI Systems Architect",
+  description: "Mario Hodzelmans | AI Systems Architect",
 };
 export default async function BlogArticlePage() {
   const posts = await getBlogPosts(4);

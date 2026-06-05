@@ -6,8 +6,8 @@ import ParallaxDividerImage from "@/components/other-pages/team/ParallaxDividerI
 import TestimonialsSlider from "@/components/other-pages/team/TestimonialsSlider";
 import CTAWithMarquee from "@/components/other-pages/team/CTAWithMarquee";
 export const metadata: Metadata = {
-  title: "Team | Azurio - Digital Agency & Portfolio NextJs Template",
-  description: "Azurio - Digital Agency & Portfolio NextJs Template",
+  title: "Team | Mario Hodzelmans | AI Systems Architect",
+  description: "Mario Hodzelmans | AI Systems Architect",
 };
 export default function TeamPage() {
   return (

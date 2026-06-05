@@ -30,7 +30,7 @@ export default function InnerHeadline() {
                                 </TextScramble>
                               </Link>
                             </span>
-                            <span className="current-item">Works </span>
+                            <span className="current-item">Cases </span>
                           </div>
                         </div>
                       </CommonLoadFade>
@@ -47,7 +47,7 @@ export default function InnerHeadline() {
                                   className="medium loading-split"
                                   animation="splitLinesLoad"
                                 >
-                                  Where bold ideas <span>take shape</span>
+                                  Where strategy <span>takes shape</span>
                                 </CommonAnimatedText>
                               </div>
                               {/* <div class="inner-headline__subtitle">

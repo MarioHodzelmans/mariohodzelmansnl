@@ -32,7 +32,13 @@ export async function getBlogPosts(limit = 10): Promise<BlogPostSummary[]> {
       return fallbackBlogPosts.slice(0, limit)
     }
 
-    return result.docs.map((doc, index) => ({
+    return result.docs
+      .filter((doc) => {
+        const title = String(doc.title || '').toLowerCase()
+        const slug = String(doc.slug || '').toLowerCase()
+        return !title.includes('test') && !slug.includes('test')
+      })
+      .map((doc, index) => ({
       title: doc.title,
       slug: doc.slug,
       excerpt: doc.excerpt,

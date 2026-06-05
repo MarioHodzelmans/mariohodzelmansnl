@@ -5,7 +5,7 @@ import CTAWithMarquee from "@/components/blogs/blog-standard/CTAWithMarquee";
 import { getBlogPosts } from "@/lib/blogs";
 export const metadata: Metadata = {
   title: "Blog | Mario Hodzelmans",
-  description: "AI strategy, automation and intelligent systems thinking by Mario Hodzelmans.",
+  description: "Practical notes on AI strategy, automation, knowledge systems and digital transformation.",
 };
 export default async function BlogStandardPage() {
   const posts = await getBlogPosts(12);

@@ -4,8 +4,8 @@ import ParallaxDividerImage from "@/components/other-pages/faq/ParallaxDividerIm
 import BlogPreview from "@/components/other-pages/faq/BlogPreview";
 import CTAWithMarquee from "@/components/other-pages/faq/CTAWithMarquee";
 export const metadata: Metadata = {
-  title: "Faq | Azurio - Digital Agency & Portfolio NextJs Template",
-  description: "Azurio - Digital Agency & Portfolio NextJs Template",
+  title: "Faq | Mario Hodzelmans | AI Systems Architect",
+  description: "Mario Hodzelmans | AI Systems Architect",
 };
 export default function FaqPage() {
   return (

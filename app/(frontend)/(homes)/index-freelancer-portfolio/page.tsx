@@ -8,8 +8,8 @@ import BlogPreview from "@/components/homes/index-freelancer-portfolio/BlogPrevi
 import CTA from "@/components/homes/index-freelancer-portfolio/CTA";
 export const metadata: Metadata = {
   title:
-    "Index Freelancer Portfolio | Azurio - Digital Agency & Portfolio NextJs Template",
-  description: "Azurio - Digital Agency & Portfolio NextJs Template",
+    "Index Freelancer Portfolio | Mario Hodzelmans | AI Systems Architect",
+  description: "Mario Hodzelmans | AI Systems Architect",
 };
 export default function IndexFreelancerPortfolioPage() {
   return (

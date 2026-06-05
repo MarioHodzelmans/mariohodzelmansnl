@@ -9,8 +9,8 @@ import DividerCursor from "@/components/homes/index-web-studio/DividerCursor";
 import ParallaxDividerImage from "@/components/homes/index-web-studio/ParallaxDividerImage";
 export const metadata: Metadata = {
   title:
-    "Index Web Studio | Azurio - Digital Agency & Portfolio NextJs Template",
-  description: "Azurio - Digital Agency & Portfolio NextJs Template",
+    "Index Web Studio | Mario Hodzelmans | AI Systems Architect",
+  description: "Mario Hodzelmans | AI Systems Architect",
 };
 export default function IndexWebStudioPage() {
   return (

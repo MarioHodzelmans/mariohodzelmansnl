@@ -10,8 +10,8 @@ import BlogPreview from "@/components/homes/index-creative-agency/BlogPreview";
 import CTAWithMarquee from "@/components/homes/index-creative-agency/CTAWithMarquee";
 export const metadata: Metadata = {
   title:
-    "Index Creative Agency | Azurio - Digital Agency & Portfolio NextJs Template",
-  description: "Azurio - Digital Agency & Portfolio NextJs Template",
+    "Index Creative Agency | Mario Hodzelmans | AI Systems Architect",
+  description: "Mario Hodzelmans | AI Systems Architect",
 };
 export default function IndexCreativeAgencyPage() {
   return (

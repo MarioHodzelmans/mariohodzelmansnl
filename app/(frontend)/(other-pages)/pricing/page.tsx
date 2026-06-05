@@ -6,8 +6,8 @@ import ParallaxDividerVideo from "@/components/other-pages/pricing/ParallaxDivid
 import BlogPreview from "@/components/other-pages/pricing/BlogPreview";
 import CTAWithMarquee from "@/components/other-pages/pricing/CTAWithMarquee";
 export const metadata: Metadata = {
-  title: "Pricing | Azurio - Digital Agency & Portfolio NextJs Template",
-  description: "Azurio - Digital Agency & Portfolio NextJs Template",
+  title: "Pricing | Mario Hodzelmans | AI Systems Architect",
+  description: "Mario Hodzelmans | AI Systems Architect",
 };
 export default function PricingPage() {
   return (

@@ -22,10 +22,6 @@ const socials = [
     name: "GitHub",
     href: "https://github.com/mariohodzelmans",
   },
-  {
-    name: "YouTube",
-    href: "https://www.youtube.com/@mariohodzelmans",
-  },
 ];
 
 function SocialArrow() {

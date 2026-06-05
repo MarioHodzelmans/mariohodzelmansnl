@@ -48,7 +48,7 @@ export default function Nav({
 
   const homeSectionActive = pathMatches(pathname, "/");
   const worksSectionActive = pathMatches(pathname, "/cases");
-  const pagesSectionActive = pathMatches(pathname, "/about-me");
+  const pagesSectionActive = pathMatches(pathname, "/about");
   const insightsSectionActive = pathMatches(pathname, "/blog-standard");
   const contactSectionActive = pathMatches(pathname, "/contact");
 
@@ -188,7 +188,7 @@ export default function Nav({
                         className={parentItemClass(pagesSectionActive)}
                       >
                         <div ref={toggleSlots[2]} className="main-menu__toggle">
-                          <Link className="main-menu__link" href={`/about-me`}>
+                          <Link className="main-menu__link" href={`/about`}>
                             <span
                               ref={mainSlots[4]}
                               className="main-menu__number"
@@ -324,44 +324,12 @@ export default function Nav({
                         <a
                           ref={contactSlots[4]}
                           className="tag tag-m"
-                          href="https://www.instagram.com/mariohodzelmans/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <TextScramble
-                            ref={contactRevealSlots[4]}
-                            className="mxd-scramble"
-                          >
-                            Instagram
-                          </TextScramble>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          ref={contactSlots[5]}
-                          className="tag tag-m"
-                          href="https://www.facebook.com/mario.hodzelmans/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <TextScramble
-                            ref={contactRevealSlots[5]}
-                            className="mxd-scramble"
-                          >
-                            Facebook
-                          </TextScramble>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          ref={contactSlots[6]}
-                          className="tag tag-m"
                           href="https://x.com/MarioHodzelmans"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           <TextScramble
-                            ref={contactRevealSlots[6]}
+                            ref={contactRevealSlots[4]}
                             className="mxd-scramble"
                           >
                             X (Twitter)
@@ -370,33 +338,17 @@ export default function Nav({
                       </li>
                       <li>
                         <a
-                          ref={contactSlots[7]}
+                          ref={contactSlots[5]}
                           className="tag tag-m"
                           href="https://github.com/mariohodzelmans"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
                           <TextScramble
-                            ref={contactRevealSlots[7]}
+                            ref={contactRevealSlots[5]}
                             className="mxd-scramble"
                           >
                             GitHub
-                          </TextScramble>
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          ref={contactSlots[8]}
-                          className="tag tag-m"
-                          href="https://www.youtube.com/@mariohodzelmans"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <TextScramble
-                            ref={contactRevealSlots[8]}
-                            className="mxd-scramble"
-                          >
-                            YouTube
                           </TextScramble>
                         </a>
                       </li>

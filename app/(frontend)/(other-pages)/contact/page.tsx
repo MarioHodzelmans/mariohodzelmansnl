@@ -6,8 +6,8 @@ import SectionTitle from '@/components/other-pages/contact/SectionTitle'
 import CTAWithMarquee from '@/components/other-pages/contact/CTAWithMarquee'
 
 export const metadata: Metadata = {
-  title: 'Contact | Azurio - Digital Agency & Portfolio NextJs Template',
-  description: 'Azurio - Digital Agency & Portfolio NextJs Template',
+  title: 'Contact | Mario Hodzelmans',
+  description: 'AI Systems Architect and Director Innovation & Digital Strategy.',
 }
 export default function ContactPage() {
   return (

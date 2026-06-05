@@ -11,8 +11,8 @@ import BlogPreview from "@/components/homes/index-digital-agency/BlogPreview";
 import Divider from "@/components/homes/index-digital-agency/Divider";
 export const metadata: Metadata = {
   title:
-    "Index Digital Agency | Azurio - Digital Agency & Portfolio NextJs Template",
-  description: "Azurio - Digital Agency & Portfolio NextJs Template",
+    "Index Digital Agency | Mario Hodzelmans | AI Systems Architect",
+  description: "Mario Hodzelmans | AI Systems Architect",
 };
 export default function IndexDigitalAgencyPage() {
   return (

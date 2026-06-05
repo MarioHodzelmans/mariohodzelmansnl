@@ -10,8 +10,8 @@ import BlogPreview from "@/components/homes/index-web-developer/BlogPreview";
 import CTAWithMarquee from "@/components/homes/index-web-developer/CTAWithMarquee";
 export const metadata: Metadata = {
   title:
-    "Index Web Developer | Azurio - Digital Agency & Portfolio NextJs Template",
-  description: "Azurio - Digital Agency & Portfolio NextJs Template",
+    "Index Web Developer | Mario Hodzelmans | AI Systems Architect",
+  description: "Mario Hodzelmans | AI Systems Architect",
 };
 export default function IndexWebDeveloperPage() {
   return (

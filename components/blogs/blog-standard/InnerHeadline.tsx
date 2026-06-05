@@ -42,7 +42,7 @@ export default function InnerHeadline() {
                               <CommonLoadItem index={0}>
                                 <div className="inner-headline__title pre-subtitle-large loading-item">
                                   <h1 className="large">
-                                    Blog<sup>(CMS)</sup>
+                                  Blog
                                   </h1>
                                 </div>
                               </CommonLoadItem>

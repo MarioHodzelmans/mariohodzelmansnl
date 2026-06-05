@@ -24,7 +24,7 @@ export default async function ProjectsGrid() {
                 <div className="col-12 col-xl-8 mxd-grid-item">
                   <div className="mxd-section-title__title pre-caption">
                     <CommonAnimatedText as="h2" className="reveal-type" animation="revealType">
-                      Featured case<br />studies
+                      Cases
                     </CommonAnimatedText>
                   </div>
                 </div>

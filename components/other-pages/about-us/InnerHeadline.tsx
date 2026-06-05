@@ -84,7 +84,7 @@ export default function InnerHeadline() {
                             targetId="process"
                           >
                             <TextScramble className="btn-caption mxd-scramble">
-                              Studio
+                              About
                             </TextScramble>
                           </SmoothAnchorLink>
                         </div>
@@ -99,7 +99,7 @@ export default function InnerHeadline() {
                             <Link
                               ref={trigger1Ref}
                               className="inner-headline__trigger banners-trigger-1"
-                              href={`/works-default`}
+                              href={`/cases`}
                             >
                               user experiences
                             </Link>{" "}
@@ -107,7 +107,7 @@ export default function InnerHeadline() {
                             <Link
                               ref={trigger2Ref}
                               className="inner-headline__trigger banners-trigger-2"
-                              href={`/works-default`}
+                              href={`/cases`}
                             >
                               design solutions
                             </Link>
@@ -318,7 +318,7 @@ export default function InnerHeadline() {
                                   </TextScramble>
                                 </Link>
                               </span>
-                              <span className="current-item">About Us </span>
+                              <span className="current-item">About </span>
                             </div>
                           </div>
                         </CommonLoadFade>

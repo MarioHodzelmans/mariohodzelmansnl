@@ -14,7 +14,10 @@ export default function Hero() {
   return (
     <CommonLoadAnimation>
       <>
-        <PinnedSection className="mxd-section mxd-hero-section no-padding mxd-hero-fullheight loading-wrap">
+        <PinnedSection
+          className="mxd-section mxd-hero-section no-padding mxd-hero-fullheight loading-wrap"
+          pinSpacing
+        >
           <PinnedSection.Inner>
             <div className="mxd-hero-06">
               <div className="mxd-hero-06__media">

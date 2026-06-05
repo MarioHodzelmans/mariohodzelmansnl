@@ -30,8 +30,9 @@ function PinnedSectionRoot({
   children,
   className,
   blurSection = false,
+  pinSpacing = false,
   ...rest
-}: ComponentProps<"div"> & { blurSection?: boolean }) {
+}: ComponentProps<"div"> & { blurSection?: boolean; pinSpacing?: boolean }) {
   const sectionRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
@@ -86,7 +87,7 @@ function PinnedSectionRoot({
         start: "bottom bottom",
         end: "+=100%",
         scrub: true,
-        pinSpacing: false,
+        pinSpacing,
         animation: gsap.to(inner, {
           autoAlpha: 0.3,
           y: "-40vh",
@@ -106,7 +107,7 @@ function PinnedSectionRoot({
     return () => {
       mm.revert();
     };
-  }, []);
+  }, [pinSpacing]);
 
   const value: PinnedCtx = { triggerRef, innerRef };
 

@@ -175,30 +175,6 @@ export default function Footer3({ name = "MARIO" }: { name?: string }) {
                   <li>
                     <a
                       className="mxd-socials-line__link"
-                      href="https://www.instagram.com/mariohodzelmans/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <TextScramble className="mxd-scramble">
-                        Instagram
-                      </TextScramble>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="mxd-socials-line__link"
-                      href="https://www.facebook.com/mario.hodzelmans/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <TextScramble className="mxd-scramble">
-                        Facebook
-                      </TextScramble>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="mxd-socials-line__link"
                       href="https://x.com/MarioHodzelmans"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -217,18 +193,6 @@ export default function Footer3({ name = "MARIO" }: { name?: string }) {
                     >
                       <TextScramble className="mxd-scramble">
                         GitHub
-                      </TextScramble>
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="mxd-socials-line__link"
-                      href="https://www.youtube.com/@mariohodzelmans"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <TextScramble className="mxd-scramble">
-                        YouTube
                       </TextScramble>
                     </a>
                   </li>

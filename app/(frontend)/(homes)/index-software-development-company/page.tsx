@@ -13,8 +13,8 @@ import BlogPreview from "@/components/homes/index-software-development-company/B
 import CTA from "@/components/homes/index-software-development-company/CTA";
 export const metadata: Metadata = {
   title:
-    "Index Software Development Company | Azurio - Digital Agency & Portfolio NextJs Template",
-  description: "Azurio - Digital Agency & Portfolio NextJs Template",
+    "Index Software Development Company | Mario Hodzelmans | AI Systems Architect",
+  description: "Mario Hodzelmans | AI Systems Architect",
 };
 export default function IndexSoftwareDevelopmentCompanyPage() {
   return (

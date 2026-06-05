@@ -9,7 +9,7 @@ import ParallaxDivider from "@/components/homes/index-branding-studio/ParallaxDi
 import BlogPreview from "@/components/homes/index-branding-studio/BlogPreview";
 import CTAWithMarquee from "@/components/homes/index-branding-studio/CTAWithMarquee";
 export const metadata: Metadata = {
-  title: "Azurio - Digital Agency & Portfolio NextJs Template",
+  title: "Mario Hodzelmans | AI Systems Architect",
   description: "Azurio — Digital Agency & Portfolio NextJs Template",
 };
 export default function IndexBrandingStudioPage() {

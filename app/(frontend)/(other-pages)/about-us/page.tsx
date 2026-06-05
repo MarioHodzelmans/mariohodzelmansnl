@@ -10,8 +10,8 @@ import Approach from "@/components/other-pages/about-us/Approach";
 import BlogPreview from "@/components/other-pages/about-us/BlogPreview";
 import CTAWithMarquee from "@/components/other-pages/about-us/CTAWithMarquee";
 export const metadata: Metadata = {
-  title: "About Us | Azurio - Digital Agency & Portfolio NextJs Template",
-  description: "Azurio - Digital Agency & Portfolio NextJs Template",
+  title: "About Mario Hodzelmans | AI Systems Architect",
+  description: "I help organizations transform complexity into intelligent systems.",
 };
 export default function AboutUsPage() {
   return (

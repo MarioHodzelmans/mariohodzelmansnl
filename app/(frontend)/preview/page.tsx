@@ -9,8 +9,8 @@ import Components from "@/components/preview/Components";
 import FeaturesCards from "@/components/preview/FeaturesCards";
 import DemoCTA from "@/components/preview/DemoCTA";
 export const metadata: Metadata = {
-  title: "Preview | Azurio - Digital Agency & Portfolio NextJs Template",
-  description: "Azurio - Digital Agency & Portfolio NextJs Template",
+  title: "Preview | Mario Hodzelmans | AI Systems Architect",
+  description: "Mario Hodzelmans | AI Systems Architect",
 };
 export default function PreviewPage() {
   return (

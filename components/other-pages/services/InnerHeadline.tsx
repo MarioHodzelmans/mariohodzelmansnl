@@ -62,7 +62,7 @@ export default function InnerHeadline() {
                                     </TextScramble>
                                   </Link>
                                 </span>
-                                <span className="current-item">Services </span>
+                            <span className="current-item">Capabilities </span>
                               </div>
                             </div>
                           </CommonLoadFade>
@@ -88,7 +88,7 @@ export default function InnerHeadline() {
                                           targetId="services"
                                         >
                                           <TextScramble className="btn-caption mxd-scramble">
-                                            Services
+                                            Capabilities
                                           </TextScramble>
                                         </SmoothAnchorLink>
                                       </div>
@@ -100,7 +100,7 @@ export default function InnerHeadline() {
                                         animation="splitLinesLoad"
                                       >
                                         New standards in{" "}
-                                        <span>digital excellence</span>
+                                        <span>digital systems</span>
                                       </CommonAnimatedText>
                                     </div>
                                   </div>

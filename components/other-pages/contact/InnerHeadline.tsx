@@ -62,13 +62,12 @@ export default function InnerHeadline() {
                                     className="t-bold t-large loading-split"
                                     animation="splitLinesLoad"
                                   >
-                                    Have questions? We&apos;ve got the answers!
-                                    Here, you&apos;ll find clear and concise
-                                    information{" "}
+                                    Have a digital challenge, AI idea,
+                                    automation question or system that needs
+                                    structure?{" "}
                                     <span>
-                                      about our services, process, and what to
-                                      expect when working with us. If you need
-                                      more details, feel free to reach out!
+                                      Send a short note and I&apos;ll get back
+                                      to you.
                                     </span>
                                   </CommonAnimatedText>
                                 </div>

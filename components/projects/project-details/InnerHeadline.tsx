@@ -26,13 +26,13 @@ export default function InnerHeadline() {
                         <div className="inner-headline__breadcrumbs loading-fade">
                           <div className="breadcrumbs__nav">
                             <span>
-                              <Link href={`/works-default`}>
+                              <Link href={`/cases`}>
                                 <TextScramble className="mxd-scramble">
-                                  Works
+                                  Cases
                                 </TextScramble>
                               </Link>
                             </span>
-                            <span className="current-item">Azurio </span>
+                            <span className="current-item">AI Transformation </span>
                           </div>
                         </div>
                       </CommonLoadFade>
@@ -49,7 +49,7 @@ export default function InnerHeadline() {
                                   className="large loading-split"
                                   animation="splitLinesLoad"
                                 >
-                                  Azurio
+                                  AI Transformation
                                 </CommonAnimatedText>
                               </div>
                               <div className="inner-headline__subtitle">
@@ -58,47 +58,47 @@ export default function InnerHeadline() {
                                   className="loading-split"
                                   animation="splitLinesLoad"
                                 >
-                                  Digital agency &amp; personal portfolio
-                                  <span>React Nextjs Template</span>
+                                  AI strategy, automation and intelligent systems
+                                  <span>case study</span>
                                 </CommonAnimatedText>
                               </div>
                               <div className="inner-headline__columns">
                                 <div className="tags-column">
                                   <CommonLoadItem index={0}>
                                     <TextScramble className="tag tag-m mxd-scramble loading-item">
-                                      Website
+                                      AI Strategy
                                     </TextScramble>
                                   </CommonLoadItem>
                                   <CommonLoadItem index={1}>
                                     <TextScramble className="tag tag-m mxd-scramble loading-item">
-                                      UI/UX Design
+                                      Automation
                                     </TextScramble>
                                   </CommonLoadItem>
                                   <CommonLoadItem index={2}>
                                     <TextScramble className="tag tag-m mxd-scramble loading-item">
-                                      Development
+                                      E-Commerce
                                     </TextScramble>
                                   </CommonLoadItem>
                                   <CommonLoadItem index={3}>
                                     <TextScramble className="tag tag-m mxd-scramble loading-item">
-                                      Promotions
+                                      Knowledge Systems
                                     </TextScramble>
                                   </CommonLoadItem>
                                 </div>
                                 <div className="tags-column">
                                   <CommonLoadItem index={4}>
                                     <TextScramble className="tag tag-m mxd-scramble loading-item">
-                                      Branding
+                                      AI Agents
                                     </TextScramble>
                                   </CommonLoadItem>
                                   <CommonLoadItem index={5}>
                                     <TextScramble className="tag tag-m mxd-scramble loading-item">
-                                      art Direction
+                                      Digital Operations
                                     </TextScramble>
                                   </CommonLoadItem>
                                   <CommonLoadItem index={6}>
                                     <TextScramble className="tag tag-m mxd-scramble loading-item">
-                                      Marketing
+                                      Strategy
                                     </TextScramble>
                                   </CommonLoadItem>
                                 </div>

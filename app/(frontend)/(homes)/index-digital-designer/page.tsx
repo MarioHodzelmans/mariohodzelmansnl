@@ -9,8 +9,8 @@ import ServicesList from "@/components/homes/index-digital-designer/ServicesList
 import CTAWithMarquee from "@/components/homes/index-digital-designer/CTAWithMarquee";
 export const metadata: Metadata = {
   title:
-    "Index Digital Designer | Azurio - Digital Agency & Portfolio NextJs Template",
-  description: "Azurio - Digital Agency & Portfolio NextJs Template",
+    "Index Digital Designer | Mario Hodzelmans | AI Systems Architect",
+  description: "Mario Hodzelmans | AI Systems Architect",
 };
 export default function IndexDigitalDesignerPage() {
   return (

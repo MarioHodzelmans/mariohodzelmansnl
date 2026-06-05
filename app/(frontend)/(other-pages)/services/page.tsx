@@ -5,8 +5,8 @@ import ParallaxDividerImage from "@/components/other-pages/services/ParallaxDivi
 import BlogPreview from "@/components/other-pages/services/BlogPreview";
 import CTAWithMarquee from "@/components/other-pages/services/CTAWithMarquee";
 export const metadata: Metadata = {
-  title: "Services | Azurio - Digital Agency & Portfolio NextJs Template",
-  description: "Azurio - Digital Agency & Portfolio NextJs Template",
+  title: "Services | Mario Hodzelmans | AI Systems Architect",
+  description: "Mario Hodzelmans | AI Systems Architect",
 };
 export default function ServicesPage() {
   return (

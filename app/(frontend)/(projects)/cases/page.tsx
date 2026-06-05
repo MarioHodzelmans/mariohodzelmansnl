@@ -50,7 +50,7 @@ export default async function CasesPage() {
                             </div>
                             <div className="col-12 col-xl-3 mxd-grid-item">
                               <div className="inner-headline__tags align-end-desktop tags-medium-title">
-                                {['AI Strategy', 'Automation', 'E-Commerce', 'Intelligent Systems'].map((label, index) => (
+                                {['AI Strategy', 'Automation', 'E-Commerce', 'Knowledge Systems', 'AI Agents', 'Digital Operations'].map((label, index) => (
                                   <CommonLoadItem key={label} index={index}>
                                     <TextScramble className="tag tag-m meta-tag mxd-scramble loading-item">{label}</TextScramble>
                                   </CommonLoadItem>

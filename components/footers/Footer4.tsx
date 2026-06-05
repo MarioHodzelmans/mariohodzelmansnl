@@ -47,25 +47,25 @@ export default function Footer4() {
                                   href={`/about-me`}
                                   animation="slideDownLine"
                                 >
-                                  <span>About me</span>
+                                  <span>About</span>
                                 </CommonScrollAnimatedLink>
                               </li>
                               <li>
                                 <CommonScrollAnimatedLink
                                   className="anim-uni-slide-down"
-                                  href={`/works-default`}
+                                  href={`/cases`}
                                   animation="slideDownLine"
                                 >
-                                  <span>Case studies</span>
+                                  <span>Cases</span>
                                 </CommonScrollAnimatedLink>
                               </li>
                               <li>
                                 <CommonScrollAnimatedLink
                                   className="anim-uni-slide-down"
-                                  href={`/services`}
+                                  href={`/contact`}
                                   animation="slideDownLine"
                                 >
-                                  <span>Services</span>
+                                  <span>Contact</span>
                                 </CommonScrollAnimatedLink>
                               </li>
                               <li>
@@ -153,7 +153,7 @@ export default function Footer4() {
                                   href={`/pricing`}
                                   animation="slideDownLine"
                                 >
-                                  <span>Pricing</span>
+                              <span>Blog</span>
                                 </CommonScrollAnimatedLink>
                               </li>
                               <li>
@@ -162,7 +162,7 @@ export default function Footer4() {
                                   href={`/faq`}
                                   animation="slideDownLine"
                                 >
-                                  <span>FAQ</span>
+                              <span>Contact</span>
                                 </CommonScrollAnimatedLink>
                               </li>
                             </ul>

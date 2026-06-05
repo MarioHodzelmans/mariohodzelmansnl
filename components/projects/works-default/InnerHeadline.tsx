@@ -44,7 +44,7 @@ export default function InnerHeadline() {
                                     </TextScramble>
                                   </Link>
                                 </span>
-                                <span className="current-item">Works </span>
+                                <span className="current-item">Cases </span>
                               </div>
                             </div>
                           </CommonLoadFade>
