@@ -64,53 +64,7 @@ export default function Hero() {
                         <CommonLoadItem index={3}>
                           <li className="loading-item">
                             <TextScramble className="tag tag-s-mobile tag-permanent-medium mxd-scramble">
-                              Knowledge Systems
-                            </TextScramble>
-                          </li>
-                        </CommonLoadItem>
-                        <CommonLoadItem index={4}>
-                          <li className="loading-item">
-                            <TextScramble className="tag tag-s-mobile tag-permanent-medium mxd-scramble">
-                              E-Commerce Architecture
-                            </TextScramble>
-                          </li>
-                        </CommonLoadItem>
-                      </ul>
-                    </div>
-                    <div className="tags-column">
-                      <ul>
-                        <CommonLoadItem index={5}>
-                          <li className="loading-item">
-                            <TextScramble className="tag tag-s-mobile tag-permanent-medium mxd-scramble">
-                              Innovation Management
-                            </TextScramble>
-                          </li>
-                        </CommonLoadItem>
-                        <CommonLoadItem index={6}>
-                          <li className="loading-item">
-                            <TextScramble className="tag tag-s-mobile tag-permanent-medium mxd-scramble">
-                              Business Intelligence
-                            </TextScramble>
-                          </li>
-                        </CommonLoadItem>
-                        <CommonLoadItem index={7}>
-                          <li className="loading-item">
-                            <TextScramble className="tag tag-s-mobile tag-permanent-medium mxd-scramble">
-                              Systems Design
-                            </TextScramble>
-                          </li>
-                        </CommonLoadItem>
-                        <CommonLoadItem index={8}>
-                          <li className="loading-item">
-                            <TextScramble className="tag tag-s-mobile tag-permanent-medium mxd-scramble">
                               AI Agents
-                            </TextScramble>
-                          </li>
-                        </CommonLoadItem>
-                        <CommonLoadItem index={9}>
-                          <li className="loading-item">
-                            <TextScramble className="tag tag-s-mobile tag-permanent-medium mxd-scramble">
-                              Growth
                             </TextScramble>
                           </li>
                         </CommonLoadItem>
@@ -123,9 +77,9 @@ export default function Hero() {
                       className="medium permanent loading-split"
                       animation="splitLinesLoad"
                     >
-                      Turning Complexity Into
+                      AI Is Changing Everything.
                       <br />
-                      Intelligent Systems
+                      Let&apos;s Build What&apos;s Next.
                     </CommonAnimatedText>
                   </div>
                 </div>
@@ -137,11 +91,12 @@ export default function Hero() {
                       className="t-bold t-permanent loading-split"
                       animation="splitLinesLoad"
                     >
-                      AI Strategy. Automation. Digital Transformation.
+                      AI Strategy. Automation. Intelligent Systems.
                       <br />
                       <span>
-                        Helping organizations prepare for the future through AI,
-                        strategy, automation and intelligent systems.
+                        AI strategist helping organizations transform complexity
+                        into intelligent systems through automation, digital
+                        transformation and scalable AI solutions.
                       </span>
                     </CommonAnimatedText>
                   </div>
