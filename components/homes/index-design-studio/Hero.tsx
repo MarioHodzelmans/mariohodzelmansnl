@@ -57,14 +57,14 @@ export default function Hero() {
                         <CommonLoadItem index={2}>
                           <li className="loading-item">
                             <TextScramble className="tag tag-s-mobile tag-permanent-medium mxd-scramble">
-                              Digital Transformation
+                              E-Commerce
                             </TextScramble>
                           </li>
                         </CommonLoadItem>
                         <CommonLoadItem index={3}>
                           <li className="loading-item">
                             <TextScramble className="tag tag-s-mobile tag-permanent-medium mxd-scramble">
-                              AI Agents
+                              Intelligent Systems
                             </TextScramble>
                           </li>
                         </CommonLoadItem>
@@ -91,12 +91,11 @@ export default function Hero() {
                       className="t-bold t-permanent loading-split"
                       animation="splitLinesLoad"
                     >
-                      AI Strategy. Automation. Intelligent Systems.
+                      Strategy. Systems. Execution.
                       <br />
                       <span>
-                        AI strategist helping organizations transform complexity
-                        into intelligent systems through automation, digital
-                        transformation and scalable AI solutions.
+                        Helping organizations turn complexity into scalable systems, automation
+                        and digital growth.
                       </span>
                     </CommonAnimatedText>
                   </div>
