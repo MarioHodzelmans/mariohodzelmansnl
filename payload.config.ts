@@ -8,7 +8,9 @@ import { fileURLToPath } from 'url'
 import { Media } from './payload/collections/Media.ts'
 import { Users } from './payload/collections/Users.ts'
 import { Blogs } from './payload/collections/Blogs.ts'
+import { Cases } from './payload/collections/Cases.ts'
 import { fallbackBlogPosts } from './lib/blogModels.ts'
+import { fallbackCases } from './lib/cases.ts'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -28,12 +30,8 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media, Blogs],
+  collections: [Users, Media, Blogs, Cases],
   onInit: async (payload) => {
-    if (process.env.PAYLOAD_SEED_BLOGS === 'false') {
-      return
-    }
-
     try {
       const existingBlogs = await payload.find({
         collection: 'blogs',
@@ -58,6 +56,29 @@ export default buildConfig({
             categories: post.categories.map((label) => ({ label })),
           },
         })
+      }
+
+      const existingCases = await payload.find({
+        collection: 'cases',
+        limit: 1,
+      })
+
+      if (existingCases.totalDocs === 0 && process.env.PAYLOAD_SEED_CASES !== 'false') {
+        for (const item of fallbackCases) {
+          await payload.create({
+            collection: 'cases',
+            data: {
+              title: item.title,
+              slug: item.slug,
+              excerpt: item.excerpt,
+              category: item.category,
+              services: item.services.map((service) => ({ service })),
+              year: item.year,
+              featured: item.featured,
+              sortOrder: item.sortOrder,
+            },
+          })
+        }
       }
     } catch (error) {
       payload.logger.warn({ err: error }, 'Skipping automatic blog seed')

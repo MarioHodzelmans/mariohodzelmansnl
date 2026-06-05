@@ -17,7 +17,7 @@ export const homeLinks: MenuLinkItem[] = [
 ];
 
 export const worksLinks: MenuLinkItem[] = [
-  { href: "/works-grid-sticky", label: "Work" },
+  { href: "/cases", label: "Cases" },
 ];
 
 export const pageLinks: MenuLinkItem[] = [

@@ -52,10 +52,10 @@ export default function Footer2({ name = "MARIO" }: { name?: string }) {
                               <li>
                                 <CommonScrollAnimatedLink
                                   className="anim-uni-slide-down"
-                                  href={`/works-grid-sticky`}
+                                  href={`/cases`}
                                   animation="slideDownLine"
                                 >
-                                  <span>Work</span>
+                                  <span>Cases</span>
                                 </CommonScrollAnimatedLink>
                               </li>
                               <li>

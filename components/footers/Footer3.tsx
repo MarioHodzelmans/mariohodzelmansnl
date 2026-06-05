@@ -29,11 +29,11 @@ export default function Footer3({ name = "MARIO" }: { name?: string }) {
                 <li className="footer-nav-v01__item">
                   <CommonScrollAnimatedLink
                     className="anim-uni-slide-down"
-                    href={`/works-grid-sticky`}
+                    href={`/cases`}
                     animation="slideDownLine"
                   >
                     <TextScramble className="mxd-scramble mxd-slide-down">
-                      / 02 Work
+                      / 02 Cases
                     </TextScramble>
                   </CommonScrollAnimatedLink>
                 </li>

@@ -47,7 +47,7 @@ export default function Nav({
   const g = useMxdMenuGsapRefs();
 
   const homeSectionActive = pathMatches(pathname, "/");
-  const worksSectionActive = pathMatches(pathname, "/works-grid-sticky");
+  const worksSectionActive = pathMatches(pathname, "/cases");
   const pagesSectionActive = pathMatches(pathname, "/about-me");
   const insightsSectionActive = pathMatches(pathname, "/blog-standard");
   const contactSectionActive = pathMatches(pathname, "/contact");
@@ -163,7 +163,7 @@ export default function Nav({
                         className={parentItemClass(worksSectionActive)}
                       >
                         <div ref={toggleSlots[1]} className="main-menu__toggle">
-                          <Link className="main-menu__link" href={`/works-grid-sticky`}>
+                          <Link className="main-menu__link" href={`/cases`}>
                             <span
                               ref={mainSlots[2]}
                               className="main-menu__number"
@@ -174,7 +174,7 @@ export default function Nav({
                               ref={mainSlots[3]}
                               className="main-menu__caption"
                             >
-                              Work
+                              Cases
                             </span>
                           </Link>
                         </div>
