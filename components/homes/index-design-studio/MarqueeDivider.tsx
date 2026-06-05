@@ -13,7 +13,11 @@ const categories = [
   "Growth Strategy", "Process Automation", "AI Implementation", "Decision Support",
 ];
 
-const images = Array.from({ length: 16 }, (_, index) => `/img/cta/mar_${String((index % 14) + 1).padStart(2, "0")}.webp`);
+const images = Array.from({ length: 16 }, (_, index) => {
+  const file = `mar_${String((index % 14) + 1).padStart(2, "0")}.webp`;
+  if (file === "mar_08.webp" || file === "mar_09.webp") return `/img/cta/${file}?v=2`;
+  return `/img/cta/${file}`;
+});
 
 function Items({ offset = 0 }: { offset?: number }) {
   return categories.map((category, index) => (
