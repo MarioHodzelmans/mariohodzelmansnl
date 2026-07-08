@@ -62,7 +62,7 @@ export default function Nav({
     () => makeSlotters(g.contactRevealTargets, 9),
     [g],
   );
-  const footerSlots = useMemo(() => makeSlotters(g.footerSplitTargets, 4), [g]);
+  const footerSlots = useMemo(() => makeSlotters(g.footerSplitTargets, 2), [g]);
   const dividerSlots = useMemo(() => makeSlotters(g.dividers, 6), [g]);
   const liSlots = useMemo(() => makeSlotters(g.menuItemLis, 5), [g]);
   const toggleSlots = useMemo(() => makeSlotters(g.menuToggles, 5), [g]);
@@ -365,10 +365,7 @@ export default function Nav({
                   </p>
                 </div>
                 <div className="menu-data__right">
-                  <p ref={footerSlots[2]} className="menu-data__text">
-                    AI Systems Architect
-                  </p>
-                  <p ref={footerSlots[3]} className="menu-data__text">
+                  <p ref={footerSlots[1]} className="menu-data__text">
                     ©{new Date().getFullYear()}
                   </p>
                 </div>

@@ -14,7 +14,7 @@ import {
 const N_HEADER = 3;
 const N_MAIN_SPANS = 10;
 const N_CONTACT = 5;
-const N_FOOTER = 3;
+const N_FOOTER = 2;
 const N_DIVIDERS = 6;
 const N_ARROWS = 0;
 const N_ROWS = 5;
