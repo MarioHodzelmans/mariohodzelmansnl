@@ -11,43 +11,50 @@ const resources = [
     name: "Godly",
     url: "https://godly.website",
     category: "Website inspiration",
-    description: "Curated website inspiration for designers, with a strong focus on modern art direction, interaction and motion.",
+    description:
+      "Curated website inspiration for designers, with a strong focus on modern art direction, interaction and motion.",
   },
   {
     name: "Haikei",
     url: "https://haikei.app",
     category: "Visual generator",
-    description: "A free generator for SVG backgrounds, blobs, waves and layered shapes that are ready to use in digital projects.",
+    description:
+      "A free generator for SVG backgrounds, blobs, waves and layered shapes that are ready to use in digital projects.",
   },
   {
     name: "Fontjoy",
     url: "https://fontjoy.com",
     category: "Typography",
-    description: "An AI-assisted font pairing generator for quickly discovering balanced and distinctive typography combinations.",
+    description:
+      "An AI-assisted font pairing generator for quickly discovering balanced and distinctive typography combinations.",
   },
   {
     name: "Color Hunt",
     url: "https://colorhunt.co",
     category: "Colour",
-    description: "A free collection of curated colour palettes for websites, brands, interfaces and other creative projects.",
+    description:
+      "A free collection of curated colour palettes for websites, brands, interfaces and other creative projects.",
   },
   {
     name: "Red Dot",
     url: "https://www.red-dot.org",
     category: "Award-winning design",
-    description: "An international design award and archive showcasing recognised work across product, brand and communication design.",
+    description:
+      "An international design award and archive showcasing recognised work across product, brand and communication design.",
   },
   {
     name: "Behance",
     url: "https://www.behance.net",
     category: "Creative work",
-    description: "A global platform for discovering detailed creative projects, visual identities, campaigns and digital experiences.",
+    description:
+      "A global platform for discovering detailed creative projects, visual identities, campaigns and digital experiences.",
   },
   {
     name: "Dribbble",
     url: "https://dribbble.com",
     category: "UI inspiration",
-    description: "A broad visual discovery platform for interface design, illustration, branding, animation and digital product concepts.",
+    description:
+      "A broad visual discovery platform for interface design, illustration, branding, animation and digital product concepts.",
   },
 ] as const;
 
@@ -71,12 +78,13 @@ export default function ResourcesPage() {
             key={resource.name}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={`${resource.name} — opens in a new tab`}
           >
             <div className="resource-card__topline">
               <span>{String(index + 1).padStart(2, "0")}</span>
               <span>{resource.category}</span>
             </div>
-            <div>
+            <div className="resource-card__content">
               <h2>{resource.name}</h2>
               <p>{resource.description}</p>
             </div>
@@ -100,15 +108,16 @@ export default function ResourcesPage() {
 
         .resources-eyebrow {
           margin: 0 0 1.5rem;
-          font-size: 0.78rem;
+          font-size: clamp(0.82rem, 0.8vw, 0.95rem);
           letter-spacing: 0.12em;
           text-transform: uppercase;
-          opacity: 0.58;
+          opacity: 0.62;
         }
 
         .resources-hero h1 {
           max-width: 12ch;
           margin: 0;
+          color: #111;
           font-size: clamp(3.4rem, 10vw, 9.5rem);
           font-weight: 500;
           line-height: 0.9;
@@ -118,10 +127,10 @@ export default function ResourcesPage() {
         .resources-intro {
           max-width: 42rem;
           margin: clamp(2rem, 5vw, 4rem) 0 0 auto;
-          font-size: clamp(1.05rem, 1.8vw, 1.45rem);
-          line-height: 1.5;
+          font-size: clamp(1.15rem, 1.8vw, 1.55rem);
+          line-height: 1.55;
           letter-spacing: -0.02em;
-          opacity: 0.72;
+          opacity: 0.76;
         }
 
         .resources-grid {
@@ -135,53 +144,76 @@ export default function ResourcesPage() {
 
         .resource-card {
           min-height: 27rem;
-          padding: clamp(1.5rem, 3vw, 3rem);
+          padding: clamp(1.75rem, 3vw, 3.25rem);
           display: flex;
           flex-direction: column;
           justify-content: space-between;
           gap: 4rem;
-          color: inherit;
+          color: #111;
           text-decoration: none;
           border-right: 1px solid rgba(17, 17, 17, 0.22);
           border-bottom: 1px solid rgba(17, 17, 17, 0.22);
           transition: background-color 220ms ease, color 220ms ease;
         }
 
-        .resource-card:hover {
+        .resource-card:hover,
+        .resource-card:focus-visible {
           background: #111;
           color: #f4f1eb;
+          outline: none;
         }
 
         .resource-card__topline {
           display: flex;
           justify-content: space-between;
           gap: 1rem;
-          font-size: 0.72rem;
+          color: inherit;
+          font-size: clamp(0.8rem, 0.75vw, 0.95rem);
           letter-spacing: 0.1em;
           text-transform: uppercase;
-          opacity: 0.58;
+          opacity: 0.64;
+        }
+
+        .resource-card__content {
+          color: inherit;
         }
 
         .resource-card h2 {
-          margin: 0 0 1.2rem;
-          font-size: clamp(2.2rem, 4vw, 4.8rem);
+          margin: 0 0 1.35rem;
+          color: inherit !important;
+          font-size: clamp(2.75rem, 4.6vw, 5.4rem);
           font-weight: 500;
-          line-height: 0.95;
+          line-height: 0.94;
           letter-spacing: -0.055em;
+          transition: color 220ms ease;
         }
 
         .resource-card p {
-          max-width: 36rem;
+          max-width: 39rem;
           margin: 0;
-          font-size: 1rem;
+          color: inherit !important;
+          font-size: clamp(1.08rem, 1.2vw, 1.3rem);
           line-height: 1.6;
-          opacity: 0.68;
+          opacity: 0.72;
+          transition: color 220ms ease;
         }
 
         .resource-card__link {
-          font-size: 0.82rem;
+          color: inherit;
+          font-size: clamp(0.88rem, 0.8vw, 1rem);
           letter-spacing: 0.08em;
           text-transform: uppercase;
+        }
+
+        .resource-card:hover h2,
+        .resource-card:hover p,
+        .resource-card:hover .resource-card__topline,
+        .resource-card:hover .resource-card__link,
+        .resource-card:focus-visible h2,
+        .resource-card:focus-visible p,
+        .resource-card:focus-visible .resource-card__topline,
+        .resource-card:focus-visible .resource-card__link {
+          color: #f4f1eb !important;
         }
 
         @media (max-width: 800px) {
