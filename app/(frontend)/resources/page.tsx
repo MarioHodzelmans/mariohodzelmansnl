@@ -1,33 +1,53 @@
 import type { Metadata } from "next";
+import FeaturedResources from "./FeaturedResources";
 import ResourcesLibrary from "./ResourcesLibrary";
 
 export const metadata: Metadata = {
   title: "Resources | Mario Hodzelmans",
   description:
-    "A curated library of design inspiration, creative platforms, typography tools and visual resources selected by Mario Hodzelmans.",
+    "A curated library of AI tools, development platforms, automation systems and design resources selected by Mario Hodzelmans.",
 };
+
+const stats = [
+  { value: "65+", label: "Tools and platforms" },
+  { value: "9", label: "Curated categories" },
+  { value: "Daily", label: "Used in active workflows" },
+] as const;
 
 export default function ResourcesPage() {
   return (
     <main className="resources-page">
       <section className="resources-hero">
         <div className="resources-hero__topline">
-          <p className="resources-eyebrow">/ Curated library</p>
-          <p className="resources-count">Selected tools & inspiration</p>
+          <p className="resources-eyebrow">/ AI & digital library</p>
+          <p className="resources-count">Selected tools, systems & inspiration</p>
         </div>
-        <h1>Resources for better digital work.</h1>
+
+        <h1>Resources for intelligent digital work.</h1>
+
         <div className="resources-hero__footer">
           <p className="resources-intro">
-            A growing visual library of websites, tools and platforms I use to
-            explore design, typography, colour, motion and creative direction.
+            A growing collection of the AI platforms, development tools,
+            automation systems and design resources I use to build intelligent
+            digital products and long-term knowledge systems.
           </p>
           <p className="resources-note">
-            Every resource opens in a new tab. Website previews are generated
+            Every resource opens in a new tab. Previews are generated
             automatically and may take a moment to appear on first load.
           </p>
         </div>
+
+        <div className="resources-stats" aria-label="Library statistics">
+          {stats.map((stat) => (
+            <div className="resources-stat" key={stat.label}>
+              <strong>{stat.value}</strong>
+              <span>{stat.label}</span>
+            </div>
+          ))}
+        </div>
       </section>
 
+      <FeaturedResources />
       <ResourcesLibrary />
 
       <style>{`
@@ -41,7 +61,7 @@ export default function ResourcesPage() {
 
         .resources-hero {
           max-width: 104rem;
-          margin: 0 auto clamp(5rem, 10vw, 9rem);
+          margin: 0 auto clamp(6rem, 11vw, 10rem);
         }
 
         .resources-hero__topline {
@@ -58,7 +78,7 @@ export default function ResourcesPage() {
         .resources-count {
           margin: 0;
           color: var(--t-medium);
-          font-size: clamp(0.95rem, 0.95vw, 1.1rem);
+          font-size: clamp(1rem, 1vw, 1.15rem);
           letter-spacing: 0.1em;
           text-transform: uppercase;
         }
@@ -91,19 +111,54 @@ export default function ResourcesPage() {
         }
 
         .resources-intro {
-          max-width: 50rem;
+          max-width: 54rem;
           color: var(--t-bright);
-          font-size: clamp(1.4rem, 2.1vw, 1.9rem);
-          line-height: 1.48;
+          font-size: clamp(1.45rem, 2.2vw, 2rem);
+          line-height: 1.46;
           letter-spacing: -0.025em;
         }
 
         .resources-note {
-          max-width: 33rem;
+          max-width: 34rem;
           justify-self: end;
           color: var(--t-medium);
-          font-size: clamp(1.05rem, 1.15vw, 1.25rem);
+          font-size: clamp(1.08rem, 1.2vw, 1.3rem);
           line-height: 1.6;
+        }
+
+        .resources-stats {
+          margin-top: clamp(4rem, 8vw, 7rem);
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          border-top: 1px solid var(--t-muted-extra);
+          border-bottom: 1px solid var(--t-muted-extra);
+        }
+
+        .resources-stat {
+          min-height: 12rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 2rem;
+          padding: clamp(1.5rem, 2.5vw, 2.5rem);
+        }
+
+        .resources-stat + .resources-stat {
+          border-left: 1px solid var(--t-muted-extra);
+        }
+
+        .resources-stat strong {
+          color: var(--t-bright);
+          font-size: clamp(3.2rem, 5vw, 6rem);
+          font-weight: 500;
+          line-height: .9;
+          letter-spacing: -.055em;
+        }
+
+        .resources-stat span {
+          color: var(--t-medium);
+          font-size: clamp(1rem, 1.1vw, 1.2rem);
+          letter-spacing: .04em;
         }
 
         @media (max-width: 760px) {
@@ -117,6 +172,15 @@ export default function ResourcesPage() {
 
           .resources-note {
             justify-self: start;
+          }
+
+          .resources-stats {
+            grid-template-columns: 1fr;
+          }
+
+          .resources-stat + .resources-stat {
+            border-left: 0;
+            border-top: 1px solid var(--t-muted-extra);
           }
         }
       `}</style>
