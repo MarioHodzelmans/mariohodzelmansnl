@@ -33,14 +33,15 @@ export default function ResourcesPage() {
       <style>{`
         .resources-page {
           min-height: 100vh;
-          background: #f4f1eb;
-          color: #111;
-          padding: clamp(8rem, 14vw, 13rem) clamp(1.25rem, 4vw, 4rem) clamp(5rem, 10vw, 10rem);
+          background: var(--base);
+          color: var(--t-bright);
+          padding: clamp(9rem, 15vw, 14rem) clamp(1.25rem, 4vw, 4rem) clamp(6rem, 12vw, 12rem);
+          transition: background-color 320ms ease, color 320ms ease;
         }
 
         .resources-hero {
           max-width: 104rem;
-          margin: 0 auto clamp(4rem, 8vw, 7rem);
+          margin: 0 auto clamp(5rem, 10vw, 9rem);
         }
 
         .resources-hero__topline {
@@ -48,43 +49,39 @@ export default function ResourcesPage() {
           justify-content: space-between;
           gap: 2rem;
           align-items: center;
-          margin-bottom: clamp(2rem, 4vw, 4rem);
-          padding-bottom: 1rem;
-          border-bottom: 1px solid rgba(17, 17, 17, 0.2);
+          margin-bottom: clamp(2.75rem, 5vw, 5rem);
+          padding-bottom: 1.25rem;
+          border-bottom: 1px solid var(--t-muted-extra);
         }
 
         .resources-eyebrow,
         .resources-count {
           margin: 0;
-          font-size: clamp(0.82rem, 0.8vw, 0.95rem);
-          letter-spacing: 0.11em;
+          color: var(--t-medium);
+          font-size: clamp(0.95rem, 0.95vw, 1.1rem);
+          letter-spacing: 0.1em;
           text-transform: uppercase;
         }
 
-        .resources-eyebrow {
-          opacity: 0.72;
-        }
-
         .resources-count {
-          opacity: 0.42;
           text-align: right;
         }
 
         .resources-hero h1 {
           max-width: 11ch;
           margin: 0;
-          color: #111;
-          font-size: clamp(3.8rem, 10.5vw, 10rem);
+          color: var(--t-bright);
+          font-size: clamp(4.4rem, 10.8vw, 10.5rem);
           font-weight: 500;
-          line-height: 0.88;
-          letter-spacing: -0.07em;
+          line-height: 0.89;
+          letter-spacing: -0.068em;
         }
 
         .resources-hero__footer {
-          margin-top: clamp(2.5rem, 6vw, 5rem);
+          margin-top: clamp(3.5rem, 7vw, 6.5rem);
           display: grid;
-          grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.7fr);
-          gap: clamp(2rem, 6vw, 7rem);
+          grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.7fr);
+          gap: clamp(3rem, 7vw, 8rem);
           align-items: end;
         }
 
@@ -94,19 +91,19 @@ export default function ResourcesPage() {
         }
 
         .resources-intro {
-          max-width: 48rem;
-          font-size: clamp(1.2rem, 1.9vw, 1.65rem);
-          line-height: 1.5;
+          max-width: 50rem;
+          color: var(--t-bright);
+          font-size: clamp(1.4rem, 2.1vw, 1.9rem);
+          line-height: 1.48;
           letter-spacing: -0.025em;
-          opacity: 0.78;
         }
 
         .resources-note {
-          max-width: 31rem;
+          max-width: 33rem;
           justify-self: end;
-          font-size: clamp(0.92rem, 1vw, 1.05rem);
-          line-height: 1.55;
-          opacity: 0.5;
+          color: var(--t-medium);
+          font-size: clamp(1.05rem, 1.15vw, 1.25rem);
+          line-height: 1.6;
         }
 
         @media (max-width: 760px) {
