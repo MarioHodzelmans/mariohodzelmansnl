@@ -16,7 +16,7 @@ export default function Hero() {
       <>
         <PinnedSection
           className="mxd-section mxd-hero-section no-padding mxd-hero-fullheight loading-wrap"
-          pinSpacing
+          pinSpacing={false}
         >
           <PinnedSection.Inner>
             <div className="mxd-hero-06">
