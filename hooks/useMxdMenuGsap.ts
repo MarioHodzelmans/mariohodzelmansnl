@@ -12,12 +12,12 @@ import {
 } from "@/lib/template/mxdMenuGsap";
 
 const N_HEADER = 3;
-const N_MAIN_SPANS = 10;
+const N_MAIN_SPANS = 12;
 const N_CONTACT = 5;
 const N_FOOTER = 2;
-const N_DIVIDERS = 6;
+const N_DIVIDERS = 7;
 const N_ARROWS = 0;
-const N_ROWS = 5;
+const N_ROWS = 6;
 
 function compact<T>(arr: (T | null | undefined)[]): T[] {
   return arr.filter((x): x is T => x != null);
@@ -213,8 +213,8 @@ export function useMxdMenuGsapRefs(): UseMxdMenuGsapRefs {
 }
 
 /**
- * Binds GSAP menu using explicit refs from `Nav` plus `navNode` / `toggleNode` /
- * `hamburgerNode`. Closes the menu when the route changes.
+ * Binds GSAP menu using explicit refs from Nav plus navNode / toggleNode /
+ * hamburgerNode. Closes the menu when the route changes.
  */
 export function useMxdMenuGsap(
   navNode: HTMLElement | null,
