@@ -35,6 +35,18 @@ export default function ResourcesLibrary() {
     });
   }, [activeCategory, query]);
 
+  function changeCategory(category: (typeof categories)[number]) {
+    const scrollPosition = window.scrollY;
+    setActiveCategory(category);
+
+    requestAnimationFrame(() => {
+      window.scrollTo({ top: scrollPosition, left: 0, behavior: "auto" });
+      requestAnimationFrame(() => {
+        window.scrollTo({ top: scrollPosition, left: 0, behavior: "auto" });
+      });
+    });
+  }
+
   return (
     <>
       <section className="resources-controls" aria-label="Filter resources">
@@ -44,7 +56,9 @@ export default function ResourcesLibrary() {
               key={category}
               type="button"
               className={activeCategory === category ? "is-active" : ""}
-              onClick={() => setActiveCategory(category)}
+              aria-pressed={activeCategory === category}
+              onMouseDown={(event) => event.preventDefault()}
+              onClick={() => changeCategory(category)}
             >
               {category}
             </button>
@@ -84,28 +98,30 @@ export default function ResourcesLibrary() {
       <style>{`
         .resources-controls {
           max-width: 104rem;
-          margin: 0 auto clamp(4rem, 7vw, 6.5rem);
+          margin: 0 auto clamp(4.5rem, 8vw, 7rem);
           display: flex;
           justify-content: space-between;
           align-items: flex-end;
-          gap: 2.5rem;
+          gap: clamp(3rem, 6vw, 7rem);
           flex-wrap: wrap;
         }
 
         .resources-filters {
           display: flex;
-          gap: .8rem;
+          gap: 1rem;
           flex-wrap: wrap;
+          flex: 1 1 48rem;
         }
 
         .resources-filters button {
           border: 1px solid var(--t-muted-extra);
           background: transparent;
           color: var(--t-bright);
-          padding: .9rem 1.2rem;
+          padding: 1.05rem 1.45rem;
           border-radius: 999px;
           font: inherit;
-          font-size: clamp(1rem, 1vw, 1.1rem);
+          font-size: clamp(1.15rem, 1.15vw, 1.3rem);
+          font-weight: 500;
           line-height: 1;
           cursor: pointer;
           transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease, transform 180ms ease;
@@ -120,15 +136,17 @@ export default function ResourcesLibrary() {
         }
 
         .resources-search {
-          min-width: min(100%, 22rem);
+          width: min(100%, 27rem);
+          min-width: min(100%, 25rem);
           display: grid;
-          gap: .65rem;
+          gap: .85rem;
         }
 
         .resources-search span {
           color: var(--t-medium);
-          font-size: .92rem;
-          letter-spacing: .1em;
+          font-size: clamp(1rem, 1vw, 1.15rem);
+          font-weight: 500;
+          letter-spacing: .09em;
           text-transform: uppercase;
         }
 
@@ -138,14 +156,16 @@ export default function ResourcesLibrary() {
           border-bottom: 1px solid var(--t-muted-extra);
           background: transparent;
           color: var(--t-bright);
-          padding: .85rem 0;
+          padding: 1rem 0 1.15rem;
           font: inherit;
-          font-size: clamp(1.15rem, 1.2vw, 1.3rem);
+          font-size: clamp(1.35rem, 1.5vw, 1.65rem);
+          line-height: 1.25;
           outline: none;
         }
 
         .resources-search input::placeholder {
           color: var(--t-medium);
+          opacity: 1;
         }
 
         .resources-search input:focus {
@@ -240,7 +260,7 @@ export default function ResourcesLibrary() {
         .resource-card__category {
           margin: 0 0 .75rem;
           color: var(--t-medium);
-          font-size: .92rem;
+          font-size: 1rem;
           letter-spacing: .1em;
           text-transform: uppercase;
         }
@@ -275,15 +295,18 @@ export default function ResourcesLibrary() {
           }
         }
 
-        @media (max-width: 640px) {
+        @media (max-width: 760px) {
           .resources-controls {
             align-items: stretch;
           }
 
           .resources-search {
             width: 100%;
+            min-width: 100%;
           }
+        }
 
+        @media (max-width: 640px) {
           .resource-card__meta {
             grid-template-columns: 1fr;
             gap: 1.25rem;
