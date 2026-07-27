@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ResourcesLibrary from "./ResourcesLibrary";
 
 export const metadata: Metadata = {
   title: "Resources | Mario Hodzelmans",
@@ -6,223 +7,119 @@ export const metadata: Metadata = {
     "A curated library of design inspiration, creative platforms, typography tools and visual resources selected by Mario Hodzelmans.",
 };
 
-const resources = [
-  {
-    name: "Godly",
-    url: "https://godly.website",
-    category: "Website inspiration",
-    description:
-      "Curated website inspiration for designers, with a strong focus on modern art direction, interaction and motion.",
-  },
-  {
-    name: "Haikei",
-    url: "https://haikei.app",
-    category: "Visual generator",
-    description:
-      "A free generator for SVG backgrounds, blobs, waves and layered shapes that are ready to use in digital projects.",
-  },
-  {
-    name: "Fontjoy",
-    url: "https://fontjoy.com",
-    category: "Typography",
-    description:
-      "An AI-assisted font pairing generator for quickly discovering balanced and distinctive typography combinations.",
-  },
-  {
-    name: "Color Hunt",
-    url: "https://colorhunt.co",
-    category: "Colour",
-    description:
-      "A free collection of curated colour palettes for websites, brands, interfaces and other creative projects.",
-  },
-  {
-    name: "Red Dot",
-    url: "https://www.red-dot.org",
-    category: "Award-winning design",
-    description:
-      "An international design award and archive showcasing recognised work across product, brand and communication design.",
-  },
-  {
-    name: "Behance",
-    url: "https://www.behance.net",
-    category: "Creative work",
-    description:
-      "A global platform for discovering detailed creative projects, visual identities, campaigns and digital experiences.",
-  },
-  {
-    name: "Dribbble",
-    url: "https://dribbble.com",
-    category: "UI inspiration",
-    description:
-      "A broad visual discovery platform for interface design, illustration, branding, animation and digital product concepts.",
-  },
-] as const;
-
 export default function ResourcesPage() {
   return (
     <main className="resources-page">
       <section className="resources-hero">
-        <p className="resources-eyebrow">/ Curated library</p>
+        <div className="resources-hero__topline">
+          <p className="resources-eyebrow">/ Curated library</p>
+          <p className="resources-count">Selected tools & inspiration</p>
+        </div>
         <h1>Resources for better digital work.</h1>
-        <p className="resources-intro">
-          A growing selection of websites, tools and platforms I use to explore
-          design, typography, colour, motion and creative direction.
-        </p>
+        <div className="resources-hero__footer">
+          <p className="resources-intro">
+            A growing visual library of websites, tools and platforms I use to
+            explore design, typography, colour, motion and creative direction.
+          </p>
+          <p className="resources-note">
+            Every resource opens in a new tab. Website previews are generated
+            automatically and may take a moment to appear on first load.
+          </p>
+        </div>
       </section>
 
-      <section className="resources-grid" aria-label="Curated resources">
-        {resources.map((resource, index) => (
-          <a
-            className="resource-card"
-            href={resource.url}
-            key={resource.name}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`${resource.name} — opens in a new tab`}
-          >
-            <div className="resource-card__topline">
-              <span>{String(index + 1).padStart(2, "0")}</span>
-              <span>{resource.category}</span>
-            </div>
-            <div className="resource-card__content">
-              <h2>{resource.name}</h2>
-              <p>{resource.description}</p>
-            </div>
-            <span className="resource-card__link">Visit website ↗</span>
-          </a>
-        ))}
-      </section>
+      <ResourcesLibrary />
 
       <style>{`
         .resources-page {
           min-height: 100vh;
           background: #f4f1eb;
           color: #111;
-          padding: clamp(8rem, 14vw, 13rem) clamp(1.25rem, 4vw, 4rem) clamp(4rem, 8vw, 8rem);
+          padding: clamp(8rem, 14vw, 13rem) clamp(1.25rem, 4vw, 4rem) clamp(5rem, 10vw, 10rem);
         }
 
         .resources-hero {
           max-width: 104rem;
-          margin: 0 auto clamp(4rem, 9vw, 8rem);
+          margin: 0 auto clamp(4rem, 8vw, 7rem);
+        }
+
+        .resources-hero__topline {
+          display: flex;
+          justify-content: space-between;
+          gap: 2rem;
+          align-items: center;
+          margin-bottom: clamp(2rem, 4vw, 4rem);
+          padding-bottom: 1rem;
+          border-bottom: 1px solid rgba(17, 17, 17, 0.2);
+        }
+
+        .resources-eyebrow,
+        .resources-count {
+          margin: 0;
+          font-size: clamp(0.82rem, 0.8vw, 0.95rem);
+          letter-spacing: 0.11em;
+          text-transform: uppercase;
         }
 
         .resources-eyebrow {
-          margin: 0 0 1.5rem;
-          font-size: clamp(0.82rem, 0.8vw, 0.95rem);
-          letter-spacing: 0.12em;
-          text-transform: uppercase;
-          opacity: 0.62;
+          opacity: 0.72;
+        }
+
+        .resources-count {
+          opacity: 0.42;
+          text-align: right;
         }
 
         .resources-hero h1 {
-          max-width: 12ch;
+          max-width: 11ch;
           margin: 0;
           color: #111;
-          font-size: clamp(3.4rem, 10vw, 9.5rem);
+          font-size: clamp(3.8rem, 10.5vw, 10rem);
           font-weight: 500;
-          line-height: 0.9;
-          letter-spacing: -0.065em;
+          line-height: 0.88;
+          letter-spacing: -0.07em;
+        }
+
+        .resources-hero__footer {
+          margin-top: clamp(2.5rem, 6vw, 5rem);
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.7fr);
+          gap: clamp(2rem, 6vw, 7rem);
+          align-items: end;
+        }
+
+        .resources-intro,
+        .resources-note {
+          margin: 0;
         }
 
         .resources-intro {
-          max-width: 42rem;
-          margin: clamp(2rem, 5vw, 4rem) 0 0 auto;
-          font-size: clamp(1.15rem, 1.8vw, 1.55rem);
+          max-width: 48rem;
+          font-size: clamp(1.2rem, 1.9vw, 1.65rem);
+          line-height: 1.5;
+          letter-spacing: -0.025em;
+          opacity: 0.78;
+        }
+
+        .resources-note {
+          max-width: 31rem;
+          justify-self: end;
+          font-size: clamp(0.92rem, 1vw, 1.05rem);
           line-height: 1.55;
-          letter-spacing: -0.02em;
-          opacity: 0.76;
+          opacity: 0.5;
         }
 
-        .resources-grid {
-          max-width: 104rem;
-          margin: 0 auto;
-          display: grid;
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-          border-top: 1px solid rgba(17, 17, 17, 0.22);
-          border-left: 1px solid rgba(17, 17, 17, 0.22);
-        }
+        @media (max-width: 760px) {
+          .resources-hero__topline {
+            align-items: flex-start;
+          }
 
-        .resource-card {
-          min-height: 27rem;
-          padding: clamp(1.75rem, 3vw, 3.25rem);
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          gap: 4rem;
-          color: #111;
-          text-decoration: none;
-          border-right: 1px solid rgba(17, 17, 17, 0.22);
-          border-bottom: 1px solid rgba(17, 17, 17, 0.22);
-          transition: background-color 220ms ease, color 220ms ease;
-        }
-
-        .resource-card:hover,
-        .resource-card:focus-visible {
-          background: #111;
-          color: #f4f1eb;
-          outline: none;
-        }
-
-        .resource-card__topline {
-          display: flex;
-          justify-content: space-between;
-          gap: 1rem;
-          color: inherit;
-          font-size: clamp(0.8rem, 0.75vw, 0.95rem);
-          letter-spacing: 0.1em;
-          text-transform: uppercase;
-          opacity: 0.64;
-        }
-
-        .resource-card__content {
-          color: inherit;
-        }
-
-        .resource-card h2 {
-          margin: 0 0 1.35rem;
-          color: inherit !important;
-          font-size: clamp(2.75rem, 4.6vw, 5.4rem);
-          font-weight: 500;
-          line-height: 0.94;
-          letter-spacing: -0.055em;
-          transition: color 220ms ease;
-        }
-
-        .resource-card p {
-          max-width: 39rem;
-          margin: 0;
-          color: inherit !important;
-          font-size: clamp(1.08rem, 1.2vw, 1.3rem);
-          line-height: 1.6;
-          opacity: 0.72;
-          transition: color 220ms ease;
-        }
-
-        .resource-card__link {
-          color: inherit;
-          font-size: clamp(0.88rem, 0.8vw, 1rem);
-          letter-spacing: 0.08em;
-          text-transform: uppercase;
-        }
-
-        .resource-card:hover h2,
-        .resource-card:hover p,
-        .resource-card:hover .resource-card__topline,
-        .resource-card:hover .resource-card__link,
-        .resource-card:focus-visible h2,
-        .resource-card:focus-visible p,
-        .resource-card:focus-visible .resource-card__topline,
-        .resource-card:focus-visible .resource-card__link {
-          color: #f4f1eb !important;
-        }
-
-        @media (max-width: 800px) {
-          .resources-grid {
+          .resources-hero__footer {
             grid-template-columns: 1fr;
           }
 
-          .resource-card {
-            min-height: 23rem;
+          .resources-note {
+            justify-self: start;
           }
         }
       `}</style>
