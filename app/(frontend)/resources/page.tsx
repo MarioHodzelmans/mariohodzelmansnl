@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import FeaturedResources from "./FeaturedResources";
 import ResourcesLibrary from "./ResourcesLibrary";
 import BenchmarkResources from "./BenchmarkResources";
+import PeopleInspiration from "./PeopleInspiration";
 
 export const metadata: Metadata = {
   title: "Resources | Mario Hodzelmans",
@@ -10,9 +11,9 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { value: "69+", label: "Tools and platforms" },
-  { value: "10", label: "Curated categories" },
-  { value: "Daily", label: "Used in active workflows" },
+  { value: "75+", label: "Tools, platforms and people" },
+  { value: "11", label: "Curated categories" },
+  { value: "Daily", label: "Used for work and inspiration" },
 ] as const;
 
 export default function ResourcesPage() {
@@ -29,8 +30,8 @@ export default function ResourcesPage() {
         <div className="resources-hero__footer">
           <p className="resources-intro">
             A growing collection of the AI platforms, development tools,
-            automation systems and design resources I use to build intelligent
-            digital products and long-term knowledge systems.
+            automation systems, people and design resources that influence how
+            I build intelligent digital products and long-term knowledge systems.
           </p>
           <p className="resources-note">
             Every resource opens in a new tab. Previews are generated
@@ -49,6 +50,7 @@ export default function ResourcesPage() {
       </section>
 
       <FeaturedResources />
+      <PeopleInspiration />
       <BenchmarkResources />
       <ResourcesLibrary />
 
