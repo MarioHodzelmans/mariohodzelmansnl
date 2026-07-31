@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import FeaturedResources from "./FeaturedResources";
 import ResourcesLibrary from "./ResourcesLibrary";
+import BenchmarkResources from "./BenchmarkResources";
 
 export const metadata: Metadata = {
   title: "Resources | Mario Hodzelmans",
@@ -9,8 +10,8 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { value: "65+", label: "Tools and platforms" },
-  { value: "9", label: "Curated categories" },
+  { value: "69+", label: "Tools and platforms" },
+  { value: "10", label: "Curated categories" },
   { value: "Daily", label: "Used in active workflows" },
 ] as const;
 
@@ -48,6 +49,7 @@ export default function ResourcesPage() {
       </section>
 
       <FeaturedResources />
+      <BenchmarkResources />
       <ResourcesLibrary />
 
       <style>{`
