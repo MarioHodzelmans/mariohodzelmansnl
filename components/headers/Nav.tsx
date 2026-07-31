@@ -11,7 +11,8 @@ import TextScramble from "@/components/animations/TextScramble";
 
 function normalizePath(path: string): string {
   if (!path) return "/";
-  const normalized = path.endsWith("/") && path.length > 1 ? path.slice(0, -1) : path;
+  const normalized =
+    path.endsWith("/") && path.length > 1 ? path.slice(0, -1) : path;
   return normalized || "/";
 }
 
@@ -39,11 +40,16 @@ type NavProps = {
 const menuItems = [
   { label: "Home", href: "/" },
   { label: "Cases", href: "/cases" },
-  { label: "About", href: "/about" },
+  { label: "About", href: "/about-me" },
   { label: "Blog", href: "/blog-standard" },
   { label: "Resources", href: "/resources" },
   { label: "Contact", href: "/contact" },
 ] as const;
+
+const activeAliases: Record<string, string[]> = {
+  "/about-me": ["/about"],
+  "/blog-standard": ["/blog"],
+};
 
 export default function Nav({
   navNode,
@@ -151,7 +157,12 @@ export default function Nav({
                   <div className="main-menu__content">
                     <ul id="main-menu" className="main-menu__accordion">
                       {menuItems.map((item, index) => {
-                        const active = pathMatches(pathname, item.href);
+                        const active =
+                          pathMatches(pathname, item.href) ||
+                          (activeAliases[item.href]?.some((alias) =>
+                            pathMatches(pathname, alias),
+                          ) ??
+                            false);
                         return (
                           <li
                             key={item.href}
@@ -168,7 +179,10 @@ export default function Nav({
                               ref={toggleSlots[index]}
                               className="main-menu__toggle"
                             >
-                              <Link className="main-menu__link" href={item.href}>
+                              <Link
+                                className="main-menu__link"
+                                href={item.href}
+                              >
                                 <span
                                   ref={mainSlots[index * 2]}
                                   className="main-menu__number"
@@ -237,7 +251,10 @@ export default function Nav({
                   <div className="menu-contact__item">
                     <ul className="menu-contact__list">
                       {[
-                        ["LinkedIn", "https://www.linkedin.com/in/mariohodzelmans/"],
+                        [
+                          "LinkedIn",
+                          "https://www.linkedin.com/in/mariohodzelmans/",
+                        ],
                         ["X (Twitter)", "https://x.com/MarioHodzelmans"],
                         ["GitHub", "https://github.com/mariohodzelmans"],
                       ].map(([label, href], index) => (
