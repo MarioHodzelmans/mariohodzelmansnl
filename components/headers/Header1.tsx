@@ -21,7 +21,6 @@ export default function Header1({ initialTheme }: Header1Props) {
   useHeaderScrollHidden(headerRef, lenis);
   const pathname = usePathname();
   const isPermanent =
-    pathname === "/" ||
     pathname === "/index-branding-studio" ||
     pathname === "/index-digital-agency" ||
     pathname === "/index-web-studio" ||
@@ -55,7 +54,9 @@ export default function Header1({ initialTheme }: Header1Props) {
               </svg>
               <div className="mxd-logo__text">
                 <TextScramble className="mxd-scramble">Mario</TextScramble>
-                <TextScramble className="mxd-scramble">Hodzelmans</TextScramble>
+                <TextScramble className="mxd-scramble">
+                  Hodzelmans
+                </TextScramble>
               </div>
             </Link>
           </div>
