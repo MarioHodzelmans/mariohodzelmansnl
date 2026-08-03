@@ -1,6 +1,7 @@
 "use client";
 
 import { type FormEvent, useState } from "react";
+import posthog from "posthog-js";
 import { CommonLoadItem } from "@/components/animations/CommonLoadAnimation";
 import TextScramble from "@/components/animations/TextScramble";
 
@@ -42,6 +43,7 @@ export default function ContactForm() {
       const res = await fetch(WEB3_SUBMIT, { method: "POST", body: formData });
       const data: Web3Response = await res.json();
       if (data.success) {
+        posthog.capture("contact_form_submitted");
         setStatus("success");
         setFeedback(
           "Thanks for your message. We'll get back as soon as possible.",
@@ -49,6 +51,9 @@ export default function ContactForm() {
         form.reset();
         return;
       }
+      posthog.capture("contact_form_submission_failed", {
+        failure_type: "provider_rejection",
+      });
       setStatus("error");
       setFeedback(
         data.message && data.message.length > 0
@@ -56,6 +61,9 @@ export default function ContactForm() {
           : "Something went wrong. Please try again in a moment.",
       );
     } catch {
+      posthog.capture("contact_form_submission_failed", {
+        failure_type: "network_error",
+      });
       setStatus("error");
       setFeedback(
         "Request failed. Check your connection, ad-blockers, and try again.",
