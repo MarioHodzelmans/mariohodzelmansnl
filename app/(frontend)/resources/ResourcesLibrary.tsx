@@ -46,6 +46,7 @@ const resources = [
   { name: "n8n", url: "https://n8n.io", category: "Automation", description: "An open workflow automation platform for connecting APIs, AI agents, databases and business processes." },
   { name: "Make", url: "https://www.make.com", category: "Automation", description: "A visual automation platform for building multi-step integrations across cloud applications and data sources." },
   { name: "Zapier", url: "https://zapier.com", category: "Automation", description: "A widely supported automation platform for connecting apps, triggering workflows and orchestrating AI actions." },
+  { name: "Apify", url: "https://apify.com", category: "Automation", description: "A platform for web scraping, browser automation and turning websites into structured data for AI agents and workflows." },
   { name: "MCP", url: "https://modelcontextprotocol.io", category: "Automation", description: "The Model Context Protocol standard for securely connecting AI assistants to tools, data and external systems." },
   { name: "Local MCP", url: "https://local-mcp.com", category: "Automation", description: "A platform for connecting local tools and services to AI assistants through Model Context Protocol workflows." },
   { name: "Obot AI", url: "https://obot.ai", category: "Automation", description: "An AI agent platform focused on connecting assistants, tools and enterprise systems through MCP-based infrastructure." },
