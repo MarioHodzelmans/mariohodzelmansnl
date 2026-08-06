@@ -3,16 +3,17 @@ import FeaturedResources from "./FeaturedResources";
 import ResourcesLibrary from "./ResourcesLibrary";
 import BenchmarkResources from "./BenchmarkResources";
 import PeopleInspiration from "./PeopleInspiration";
+import PromptResources from "./PromptResources";
 
 export const metadata: Metadata = {
   title: "Resources | Mario Hodzelmans",
   description:
-    "A curated library of AI tools, development platforms, automation systems and design resources selected by Mario Hodzelmans.",
+    "A curated library of AI tools, development platforms, automation systems, creative prompts and design resources selected by Mario Hodzelmans.",
 };
 
 const stats = [
   { value: "75+", label: "Tools, platforms and people" },
-  { value: "11", label: "Curated categories" },
+  { value: "12", label: "Curated categories" },
   { value: "Daily", label: "Used for work and inspiration" },
 ] as const;
 
@@ -52,6 +53,7 @@ export default function ResourcesPage() {
       <FeaturedResources />
       <PeopleInspiration />
       <BenchmarkResources />
+      <PromptResources />
       <ResourcesLibrary />
 
       <style>{`
