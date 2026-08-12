@@ -21,6 +21,56 @@ export default async function CasesPage() {
   return (
     <CommonLoadAnimation>
       <div className="mxd-page-content inner-page-content">
+        <style>{`
+          @media (max-width: 767.98px) {
+            .case-card-mobile .mxd-project-item__caption {
+              display: flex !important;
+              flex-direction: column !important;
+              align-items: flex-start !important;
+              gap: 14px !important;
+              padding-top: 20px !important;
+            }
+
+            .case-card-mobile .mxd-project-item__name,
+            .case-card-mobile .mxd-project-item__caption > p,
+            .case-card-mobile .mxd-project-item__tags {
+              width: 100% !important;
+              max-width: none !important;
+              min-width: 0 !important;
+              flex: 0 0 auto !important;
+              margin: 0 !important;
+            }
+
+            .case-card-mobile .project-name-s {
+              display: block !important;
+              width: 100% !important;
+              font-size: clamp(2rem, 9vw, 2.8rem) !important;
+              line-height: 1.04 !important;
+              letter-spacing: -0.035em !important;
+              overflow-wrap: normal !important;
+              word-break: normal !important;
+              hyphens: none !important;
+            }
+
+            .case-card-mobile .mxd-project-item__caption > p {
+              font-size: 1.05rem !important;
+              line-height: 1.5 !important;
+            }
+
+            .case-card-mobile .mxd-project-item__tags {
+              display: flex !important;
+              flex-wrap: wrap !important;
+              align-items: center !important;
+              gap: 8px !important;
+              padding-top: 2px !important;
+            }
+
+            .case-card-mobile .mxd-project-item__media {
+              margin-bottom: 0 !important;
+            }
+          }
+        `}</style>
+
         <BlurSection className="mxd-section">
           <div className="mxd-container grid-l-container">
             <div className="mxd-block loading-wrap">
@@ -76,7 +126,7 @@ export default async function CasesPage() {
                   <div className="container-fluid p-0">
                     <div className="row g-0 mxd-projects-grid__gallery">
                       {cases.map((item, index) => (
-                        <CommonCardBatchAnimated key={item.slug} className={`col-12 col-md-6 col-xl-${index % 2 === 0 ? '4' : '7'} mxd-project-item animate-card-2${index % 2 === 0 ? ' mxd-project-item-s mxd-project-item-sticky' : ''}`} as="div" columns={2}>
+                        <CommonCardBatchAnimated key={item.slug} className={`case-card-mobile col-12 col-md-6 col-xl-${index % 2 === 0 ? '4' : '7'} mxd-project-item animate-card-2${index % 2 === 0 ? ' mxd-project-item-s mxd-project-item-sticky' : ''}`} as="div" columns={2}>
                           <Link className="mxd-project-item__media active-cursor-permanent" data-cursor-text="View Case" href={`/cases/${item.slug}`}>
                             {index % 2 === 0 ? (
                               <MxdImgAnim
