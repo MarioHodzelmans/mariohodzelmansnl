@@ -9,6 +9,7 @@ import { Media } from './payload/collections/Media.ts'
 import { Users } from './payload/collections/Users.ts'
 import { Blogs } from './payload/collections/Blogs.ts'
 import { Cases } from './payload/collections/Cases.ts'
+import { PuckPages } from './payload/collections/PuckPages.ts'
 import { fallbackBlogPosts } from './lib/blogModels.ts'
 import { fallbackCases } from './lib/cases.ts'
 
@@ -30,7 +31,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media, Blogs, Cases],
+  collections: [Users, Media, Blogs, Cases, PuckPages],
   onInit: async (payload) => {
     try {
       const existingBlogs = await payload.find({
