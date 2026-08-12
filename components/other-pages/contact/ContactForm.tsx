@@ -44,7 +44,7 @@ export default function ContactForm() {
       if (data.success) {
         setStatus("success");
         setFeedback(
-          "Thanks for your message. We'll get back as soon as possible.",
+          "Thanks for your message. I'll get back to you as soon as possible.",
         );
         form.reset();
         return;
@@ -143,7 +143,7 @@ export default function ContactForm() {
                 <div className="col-12 mxd-grid-item loading-item">
                   <textarea
                     name="message"
-                    placeholder="A few words about your project*"
+                    placeholder="What would you like to talk about?*"
                     required
                     defaultValue={""}
                     disabled={status === "sending" || showSuccessReply}
@@ -161,7 +161,7 @@ export default function ContactForm() {
                       <span className="btn-caption">Sending…</span>
                     ) : (
                       <TextScramble className="btn-caption mxd-scramble">
-                        Submit
+                        Send message
                       </TextScramble>
                     )}
                     <i className="btn-icon">
@@ -181,7 +181,11 @@ export default function ContactForm() {
           </div>
         </form>
         {status === "error" && feedback ? (
-          <p className="reply__text" role="alert" style={{ marginTop: "2.4rem" }}>
+          <p
+            className="reply__text"
+            role="alert"
+            style={{ marginTop: "2.4rem" }}
+          >
             {feedback}
           </p>
         ) : null}

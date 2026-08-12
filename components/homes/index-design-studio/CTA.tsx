@@ -26,14 +26,14 @@ export default function CTA() {
                         href={`/contact`}
                       >
                         <TextScramble className="btn-caption mxd-scramble">
-                          Schedule a Call
+                          Start a Conversation
                         </TextScramble>
                       </Link>
                     </CommonScrollAnimated>
                     <div className="mxd-promo__caption">
                       <Link
                         className="active-cursor-permanent"
-                        data-cursor-text="Contact Us"
+                        data-cursor-text="Get in Touch"
                         href={`/contact`}
                       >
                         <CommonAnimatedText
@@ -41,9 +41,13 @@ export default function CTA() {
                           className="permanent reveal-type"
                           animation="revealType"
                         >
-                          Let&apos;s Talk About The Next 5 Years
+                          Interested In The Same Questions?
                         </CommonAnimatedText>
-                        <p className="t-large permanent">AI is changing how organizations operate. Let&apos;s figure out what that means for yours.</p>
+                        <p className="t-large permanent">
+                          I&apos;m always open to exchanging ideas about AI,
+                          digital strategy, e-commerce and the systems behind
+                          modern organizations.
+                        </p>
                       </Link>
                     </div>
                   </div>

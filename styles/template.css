@@ -47,10 +47,18 @@ body {
 .mxd-menu .main-menu__item.main-menu__item--current.open .main-menu__caption {
   color: var(--accent);
 }
-.no-touch .mxd-menu .main-menu__item.main-menu__item--current .main-menu__toggle:hover .main-menu__caption {
+.no-touch
+  .mxd-menu
+  .main-menu__item.main-menu__item--current
+  .main-menu__toggle:hover
+  .main-menu__caption {
   color: var(--accent);
 }
-.no-touch .mxd-menu .main-menu__item.main-menu__item--current .main-menu__toggle:hover svg {
+.no-touch
+  .mxd-menu
+  .main-menu__item.main-menu__item--current
+  .main-menu__toggle:hover
+  svg {
   fill: var(--accent);
 }
 
@@ -194,4 +202,17 @@ body {
 .marquee-right--gsap {
   contain: paint;
   overflow: clip;
+}
+
+/* Semantic article H2s keep the visual scale of the former H3 headings. */
+.mxd-article__block .article-section-heading {
+  font: normal 700 4rem/1.2 var(--_font-default);
+  letter-spacing: -0.1rem;
+  color: var(--t-bright);
+}
+
+@media only screen and (min-width: 768px) {
+  .mxd-article__block .article-section-heading {
+    font-size: 5rem;
+  }
 }

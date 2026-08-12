@@ -3,7 +3,9 @@
 import BlurSection from "@/components/animations/BlurSection";
 import Link from "next/link";
 import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
-import CommonLoadAnimation, { CommonLoadFade } from "@/components/animations/CommonLoadAnimation";
+import CommonLoadAnimation, {
+  CommonLoadFade,
+} from "@/components/animations/CommonLoadAnimation";
 import TextScramble from "@/components/animations/TextScramble";
 import ContactForm from "@/components/other-pages/contact/ContactForm";
 export default function InnerHeadline() {
@@ -46,7 +48,7 @@ export default function InnerHeadline() {
                                   className="medium loading-split"
                                   animation="splitLinesLoad"
                                 >
-                                  Let&apos;s make it happen
+                                  Let&apos;s connect
                                 </CommonAnimatedText>
                               </div>
                               {/* <div class="inner-headline__subtitle">

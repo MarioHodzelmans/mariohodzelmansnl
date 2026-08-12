@@ -54,9 +54,7 @@ export default function Header1({ initialTheme }: Header1Props) {
               </svg>
               <div className="mxd-logo__text">
                 <TextScramble className="mxd-scramble">Mario</TextScramble>
-                <TextScramble className="mxd-scramble">
-                  Hodzelmans
-                </TextScramble>
+                <TextScramble className="mxd-scramble">Hodzelmans</TextScramble>
               </div>
             </Link>
           </div>
@@ -66,10 +64,10 @@ export default function Header1({ initialTheme }: Header1Props) {
             <Link
               className="btn mxd-header__link slide-right"
               href="/contact"
-              aria-label="Say Hello"
+              aria-label="Connect with Mario"
             >
               <span className="btn-caption">
-                <TextScramble className="mxd-scramble">Say Hello</TextScramble>
+                <TextScramble className="mxd-scramble">Connect</TextScramble>
               </span>
             </Link>
             <ThemeSwitcher

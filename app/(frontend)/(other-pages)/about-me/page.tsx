@@ -9,7 +9,22 @@ import TestimonialsSlider from "@/components/other-pages/about-me/TestimonialsSl
 import CTAWithMarquee from "@/components/other-pages/about-me/CTAWithMarquee";
 export const metadata: Metadata = {
   title: "About Mario Hodzelmans | AI Systems Architect",
-  description: "Mario Hodzelmans helps organizations transform complexity into intelligent systems.",
+  description:
+    "The background, working principles and professional perspective of Mario Hodzelmans across AI, digital strategy, e-commerce and intelligent systems.",
+  alternates: {
+    canonical: "/about-me",
+  },
+  openGraph: {
+    title: "About Mario Hodzelmans | AI Systems Architect",
+    description:
+      "The background, working principles and professional perspective of Mario Hodzelmans across AI, digital strategy, e-commerce and intelligent systems.",
+    url: "/about-me",
+  },
+  twitter: {
+    title: "About Mario Hodzelmans | AI Systems Architect",
+    description:
+      "The background, working principles and professional perspective of Mario Hodzelmans across AI, digital strategy, e-commerce and intelligent systems.",
+  },
 };
 export default function AboutMePage() {
   return (

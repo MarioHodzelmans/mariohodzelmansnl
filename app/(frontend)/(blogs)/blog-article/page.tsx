@@ -1,27 +1,7 @@
-import { Metadata } from "next";
-import BlogArticle from "@/components/blogs/blog-article/BlogArticle";
-import MoreOnTopic from "@/components/blogs/blog-article/MoreOnTopic";
-import CTAWithMarquee from "@/components/blogs/blog-article/CTAWithMarquee";
+import { redirect } from "next/navigation";
 import { getBlogPosts } from "@/lib/blogs";
-export const metadata: Metadata = {
-  title: "Blog Article | Mario Hodzelmans | AI Systems Architect",
-  description: "Mario Hodzelmans | AI Systems Architect",
-};
+
 export default async function BlogArticlePage() {
-  const posts = await getBlogPosts(4);
-  const post = posts[0];
-
-  if (!post) {
-    return null;
-  }
-
-  return (
-    <>
-      <div className="mxd-page-content inner-page-content">
-        <BlogArticle post={post} />
-        <MoreOnTopic posts={posts.slice(1)} />
-        <CTAWithMarquee />
-      </div>
-    </>
-  );
+  const [post] = await getBlogPosts(1);
+  redirect(post ? `/blog-article/${post.slug}` : "/blog-standard");
 }

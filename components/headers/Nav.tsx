@@ -11,7 +11,8 @@ import TextScramble from "@/components/animations/TextScramble";
 
 function normalizePath(path: string): string {
   if (!path) return "/";
-  const normalized = path.endsWith("/") && path.length > 1 ? path.slice(0, -1) : path;
+  const normalized =
+    path.endsWith("/") && path.length > 1 ? path.slice(0, -1) : path;
   return normalized || "/";
 }
 
@@ -38,9 +39,9 @@ type NavProps = {
 
 const menuItems = [
   { label: "Home", href: "/" },
-  { label: "Cases", href: "/cases" },
-  { label: "About", href: "/about" },
-  { label: "Blog", href: "/blog-standard" },
+  { label: "Work", href: "/cases" },
+  { label: "About", href: "/about-me" },
+  { label: "Writing", href: "/blog-standard" },
   { label: "Resources", href: "/resources" },
   { label: "Contact", href: "/contact" },
 ] as const;
@@ -140,9 +141,9 @@ export default function Nav({
               <div className="mxd-menu__shadow shadow-top" />
               <div className="mxd-menu__caption">
                 <p ref={headerSlots[2]}>
-                  I help organizations transform complexity
+                  A collection of selected work, experiments
                   <br />
-                  into intelligent systems.
+                  and ideas across AI and digital systems.
                 </p>
               </div>
 
@@ -168,7 +169,10 @@ export default function Nav({
                               ref={toggleSlots[index]}
                               className="main-menu__toggle"
                             >
-                              <Link className="main-menu__link" href={item.href}>
+                              <Link
+                                className="main-menu__link"
+                                href={item.href}
+                              >
                                 <span
                                   ref={mainSlots[index * 2]}
                                   className="main-menu__number"
@@ -237,7 +241,10 @@ export default function Nav({
                   <div className="menu-contact__item">
                     <ul className="menu-contact__list">
                       {[
-                        ["LinkedIn", "https://www.linkedin.com/in/mariohodzelmans/"],
+                        [
+                          "LinkedIn",
+                          "https://www.linkedin.com/in/mariohodzelmans/",
+                        ],
                         ["X (Twitter)", "https://x.com/MarioHodzelmans"],
                         ["GitHub", "https://github.com/mariohodzelmans"],
                       ].map(([label, href], index) => (

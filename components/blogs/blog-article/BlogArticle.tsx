@@ -37,12 +37,16 @@ export default function BlogArticle({ post }: BlogArticleProps) {
                         <div className="breadcrumbs__nav">
                           <span>
                             <Link href={`/`}>
-                              <TextScramble className="mxd-scramble">Home</TextScramble>
+                              <TextScramble className="mxd-scramble">
+                                Home
+                              </TextScramble>
                             </Link>
                           </span>
                           <span>
                             <Link href={`/blog-standard`}>
-                              <TextScramble className="mxd-scramble">Blog</TextScramble>
+                              <TextScramble className="mxd-scramble">
+                                Blog
+                              </TextScramble>
                             </Link>
                           </span>
                           <span className="current-item">{post.title}</span>
@@ -61,21 +65,41 @@ export default function BlogArticle({ post }: BlogArticleProps) {
                 <div className="mxd-article__headline">
                   <CommonLoadItem index={0}>
                     <div className="mxd-article__tags loading-item">
-                      <a href="#0"><TextScramble className="tag tag-m meta-tag comma-tag mxd-scramble">{primaryCategory}</TextScramble></a>
-                      <a href="#0"><TextScramble className="tag tag-m meta-tag comma-tag mxd-scramble">{secondaryCategory}</TextScramble></a>
-                      <a href="#0"><TextScramble className="tag tag-m meta-tag mxd-scramble">{tertiaryCategory}</TextScramble></a>
+                      <a href="#0">
+                        <TextScramble className="tag tag-m meta-tag comma-tag mxd-scramble">
+                          {primaryCategory}
+                        </TextScramble>
+                      </a>
+                      <a href="#0">
+                        <TextScramble className="tag tag-m meta-tag comma-tag mxd-scramble">
+                          {secondaryCategory}
+                        </TextScramble>
+                      </a>
+                      <a href="#0">
+                        <TextScramble className="tag tag-m meta-tag mxd-scramble">
+                          {tertiaryCategory}
+                        </TextScramble>
+                      </a>
                     </div>
                   </CommonLoadItem>
                   <div className="mxd-article__title">
-                    <CommonAnimatedText as="h2" className="small loading-split" animation="splitLinesLoad">
+                    <CommonAnimatedText
+                      as="h1"
+                      className="small loading-split"
+                      animation="splitLinesLoad"
+                    >
                       {post.title}
                     </CommonAnimatedText>
                   </div>
                   <CommonLoadItem index={1}>
                     <div className="mxd-article__meta loading-item">
                       <div className="mxd-article__data">
-                        <span className="tag tag-m meta-tag slash-tag">{articleDate}</span>
-                        <span className="tag tag-m meta-tag">{post.readTime}</span>
+                        <span className="tag tag-m meta-tag slash-tag">
+                          {articleDate}
+                        </span>
+                        <span className="tag tag-m meta-tag">
+                          {post.readTime}
+                        </span>
                       </div>
                     </div>
                   </CommonLoadItem>
@@ -83,7 +107,12 @@ export default function BlogArticle({ post }: BlogArticleProps) {
 
                 <CommonLoadItem index={2}>
                   <div className="mxd-article__thumb loading-item">
-                    <Image alt={post.title} src={post.image} width={1920} height={1200} />
+                    <Image
+                      alt={post.title}
+                      src={post.image}
+                      width={1920}
+                      height={1200}
+                    />
                   </div>
                 </CommonLoadItem>
 
@@ -92,34 +121,62 @@ export default function BlogArticle({ post }: BlogArticleProps) {
                     <p className="mxd-article__excerpt">
                       {post.excerpt}
                       <span>
-                        This post is part of Mario Hodzelmans&apos; writing on AI, strategy,
-                        automation, e-commerce and intelligent workflows.
+                        This post is part of Mario Hodzelmans&apos; writing on
+                        AI, strategy, automation, e-commerce and intelligent
+                        workflows.
                       </span>
                     </p>
                     <p className="mxd-article__normal">
-                      The aim is simple: turn complexity into something usable, measurable
-                      and more resilient for the people who rely on it every day.
+                      The aim is simple: turn complexity into something usable,
+                      measurable and more resilient for the people who rely on
+                      it every day.
                     </p>
                   </div>
 
                   <div className="mxd-article__block block-table-of-contents">
-                    <p className="table-of-contents__title">/ Table of contents:</p>
+                    <p className="table-of-contents__title">
+                      / Table of contents:
+                    </p>
                     <ul className="table-of-contents__nav">
-                      <li><SmoothAnchorLink targetId="chapter-01">Context</SmoothAnchorLink></li>
-                      <li><SmoothAnchorLink targetId="chapter-02">Approach</SmoothAnchorLink></li>
-                      <li><SmoothAnchorLink targetId="chapter-03">Practical use</SmoothAnchorLink></li>
-                      <li><SmoothAnchorLink targetId="chapter-04">Friction points</SmoothAnchorLink></li>
-                      <li><SmoothAnchorLink targetId="chapter-05">Why it matters</SmoothAnchorLink></li>
-                      <li><SmoothAnchorLink targetId="chapter-06">Closing note</SmoothAnchorLink></li>
+                      <li>
+                        <SmoothAnchorLink targetId="chapter-01">
+                          Context
+                        </SmoothAnchorLink>
+                      </li>
+                      <li>
+                        <SmoothAnchorLink targetId="chapter-02">
+                          Approach
+                        </SmoothAnchorLink>
+                      </li>
+                      <li>
+                        <SmoothAnchorLink targetId="chapter-03">
+                          Practical use
+                        </SmoothAnchorLink>
+                      </li>
+                      <li>
+                        <SmoothAnchorLink targetId="chapter-04">
+                          Friction points
+                        </SmoothAnchorLink>
+                      </li>
+                      <li>
+                        <SmoothAnchorLink targetId="chapter-05">
+                          Why it matters
+                        </SmoothAnchorLink>
+                      </li>
+                      <li>
+                        <SmoothAnchorLink targetId="chapter-06">
+                          Closing note
+                        </SmoothAnchorLink>
+                      </li>
                     </ul>
                   </div>
 
                   <div id="chapter-01" className="mxd-article__block">
-                    <h3>Context</h3>
+                    <h2 className="article-section-heading">Context</h2>
                     <p className="mxd-article__normal">
-                      Most digital work fails when strategy, systems and execution drift apart.
-                      AI becomes useful when it is applied inside clear workflows with defined
-                      ownership.
+                      Most digital work fails when strategy, systems and
+                      execution drift apart. AI becomes useful when it is
+                      applied inside clear workflows with defined ownership.
                     </p>
                   </div>
                   <div className="mxd-article__block block-quote">
@@ -135,46 +192,47 @@ export default function BlogArticle({ post }: BlogArticleProps) {
                   </div>
                   <div className="mxd-article__block">
                     <p className="mxd-article__normal">
-                      My focus is on practical leverage: using AI to support research,
-                      decision-making, drafting, automation and content operations without
-                      losing control of the process.
+                      My focus is on practical leverage: using AI to support
+                      research, decision-making, drafting, automation and
+                      content operations without losing control of the process.
                     </p>
                   </div>
                   <div id="chapter-02" className="mxd-article__block">
-                    <h3>Approach</h3>
+                    <h2 className="article-section-heading">Approach</h2>
                     <p className="mxd-article__normal">
-                      Start with the workflow, identify friction, then decide whether AI,
-                      automation or a better system design will remove it most effectively.
+                      Start with the workflow, identify friction, then decide
+                      whether AI, automation or a better system design will
+                      remove it most effectively.
                     </p>
                   </div>
                   <div id="chapter-03" className="mxd-article__block">
-                    <h3>Practical use</h3>
+                    <h2 className="article-section-heading">Practical use</h2>
                     <p className="mxd-article__normal">
-                      I use AI in research, content creation, e-commerce operations, knowledge
-                      management and internal tooling. The goal is to make work more focused,
-                      not more chaotic.
+                      I use AI in research, content creation, e-commerce
+                      operations, knowledge management and internal tooling. The
+                      goal is to make work more focused, not more chaotic.
                     </p>
                   </div>
                   <div id="chapter-04" className="mxd-article__block">
-                    <h3>Friction points</h3>
+                    <h2 className="article-section-heading">Friction points</h2>
                     <p className="mxd-article__normal">
-                      Common blockers are disconnected tools, unclear responsibilities,
-                      inconsistent data, and too much manual work in places where systems
-                      should carry the load.
+                      Common blockers are disconnected tools, unclear
+                      responsibilities, inconsistent data, and too much manual
+                      work in places where systems should carry the load.
                     </p>
                   </div>
                   <div id="chapter-05" className="mxd-article__block">
-                    <h3>Why it matters</h3>
+                    <h2 className="article-section-heading">Why it matters</h2>
                     <p className="mxd-article__normal">
-                      When systems are clearer, teams move faster, decisions improve, and AI
-                      becomes an amplifier instead of a gimmick.
+                      When systems are clearer, teams move faster, decisions
+                      improve, and AI becomes an amplifier instead of a gimmick.
                     </p>
                   </div>
                   <div id="chapter-06" className="mxd-article__block">
-                    <h3>Closing note</h3>
+                    <h2 className="article-section-heading">Closing note</h2>
                     <p className="mxd-article__normal">
-                      Intelligent work is not about more tools. It is about better structure,
-                      better flow and better outcomes.
+                      Intelligent work is not about more tools. It is about
+                      better structure, better flow and better outcomes.
                     </p>
                   </div>
                 </div>

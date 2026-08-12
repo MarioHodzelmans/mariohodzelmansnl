@@ -4,9 +4,9 @@ import { homeLinks, insightLinks, worksLinks } from "@/data/menu";
 /** Inner routes shown under “/ Inner pages” (subset of site; excludes landing home `/`). */
 export const footer1InnerPageLinks: MenuLinkItem[] = [
   { href: "/", label: "/ 01 Home" },
-  { href: "/cases", label: "/ 02 Cases" },
+  { href: "/cases", label: "/ 02 Work" },
   { href: "/about-me", label: "/ 03 About" },
-  { href: "/blog-standard", label: "/ 04 Blog" },
+  { href: "/blog-standard", label: "/ 04 Writing" },
   { href: "/contact", label: "/ 05 Contact" },
 ];
 

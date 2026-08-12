@@ -9,6 +9,20 @@ export const metadata: Metadata = {
   title: "Resources | Mario Hodzelmans",
   description:
     "A curated library of AI tools, development platforms, automation systems, creative prompts and design resources selected by Mario Hodzelmans.",
+  alternates: {
+    canonical: "/resources",
+  },
+  openGraph: {
+    title: "Resources | Mario Hodzelmans",
+    description:
+      "A curated library of AI tools, development platforms, automation systems, creative prompts and design resources selected by Mario Hodzelmans.",
+    url: "/resources",
+  },
+  twitter: {
+    title: "Resources | Mario Hodzelmans",
+    description:
+      "A curated library of AI tools, development platforms, automation systems, creative prompts and design resources selected by Mario Hodzelmans.",
+  },
 };
 
 const stats = [
@@ -23,7 +37,9 @@ export default function ResourcesPage() {
       <section className="resources-hero">
         <div className="resources-hero__topline">
           <p className="resources-eyebrow">/ AI & digital library</p>
-          <p className="resources-count">Selected tools, systems & inspiration</p>
+          <p className="resources-count">
+            Selected tools, systems & inspiration
+          </p>
         </div>
 
         <h1>Resources for intelligent digital work.</h1>
@@ -31,8 +47,8 @@ export default function ResourcesPage() {
         <div className="resources-hero__footer">
           <p className="resources-intro">
             A growing collection of the AI platforms, development tools,
-            automation systems, people and design resources that influence how
-            I build intelligent digital products and long-term knowledge systems.
+            automation systems, people and design resources that influence how I
+            build intelligent digital products and long-term knowledge systems.
           </p>
           <p className="resources-note">
             Every resource opens in a new tab. Previews are generated

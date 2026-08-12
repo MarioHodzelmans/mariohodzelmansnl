@@ -16,14 +16,12 @@ export const homeLinks: MenuLinkItem[] = [
   { href: "/index-digital-designer", label: "Digital designer" },
 ];
 
-export const worksLinks: MenuLinkItem[] = [
-  { href: "/cases", label: "Cases" },
-];
+export const worksLinks: MenuLinkItem[] = [{ href: "/cases", label: "Work" }];
 
 export const pageLinks: MenuLinkItem[] = [
   { href: "/about-me", label: "About" },
 ];
 
 export const insightLinks: MenuLinkItem[] = [
-  { href: "/blog-standard", label: "Blog" },
+  { href: "/blog-standard", label: "Writing" },
 ];

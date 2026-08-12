@@ -1,22 +1,40 @@
-import { Metadata } from 'next'
-import Link from 'next/link'
-import Image from 'next/image'
-import BlurSection from '@/components/animations/BlurSection'
-import CommonLoadAnimation, { CommonLoadFade, CommonLoadItem } from '@/components/animations/CommonLoadAnimation'
-import CommonAnimatedText from '@/components/animations/CommonAnimatedText'
-import TextScramble from '@/components/animations/TextScramble'
-import MxdImgAnim from '@/components/animations/MxdImgAnim'
-import { CommonCardBatchAnimated } from '@/components/animations/CommonScrollAnimated'
-import AutoplayLoopVideo from '@/components/media/AutoplayLoopVideo'
-import { getCases } from '@/lib/cases'
+import { Metadata } from "next";
+import Link from "next/link";
+import Image from "next/image";
+import BlurSection from "@/components/animations/BlurSection";
+import CommonLoadAnimation, {
+  CommonLoadFade,
+  CommonLoadItem,
+} from "@/components/animations/CommonLoadAnimation";
+import CommonAnimatedText from "@/components/animations/CommonAnimatedText";
+import TextScramble from "@/components/animations/TextScramble";
+import MxdImgAnim from "@/components/animations/MxdImgAnim";
+import { CommonCardBatchAnimated } from "@/components/animations/CommonScrollAnimated";
+import AutoplayLoopVideo from "@/components/media/AutoplayLoopVideo";
+import { getCases } from "@/lib/cases";
 
 export const metadata: Metadata = {
-  title: 'Cases | Mario Hodzelmans',
-  description: 'Selected case studies across AI, automation, e-commerce and intelligent business systems.',
-}
+  title: "Selected Work | Mario Hodzelmans",
+  description:
+    "Selected projects, systems and experiments by Mario Hodzelmans across AI, automation, e-commerce and organizational transformation.",
+  alternates: {
+    canonical: "/cases",
+  },
+  openGraph: {
+    title: "Selected Work | Mario Hodzelmans",
+    description:
+      "Selected projects, systems and experiments by Mario Hodzelmans across AI, automation, e-commerce and organizational transformation.",
+    url: "/cases",
+  },
+  twitter: {
+    title: "Selected Work | Mario Hodzelmans",
+    description:
+      "Selected projects, systems and experiments by Mario Hodzelmans across AI, automation, e-commerce and organizational transformation.",
+  },
+};
 
 export default async function CasesPage() {
-  const cases = await getCases(50)
+  const cases = await getCases(50);
 
   return (
     <CommonLoadAnimation>
@@ -81,7 +99,9 @@ export default async function CasesPage() {
                       <CommonLoadFade index={0}>
                         <div className="inner-headline__breadcrumbs loading-fade">
                           <div className="breadcrumbs__nav">
-                            <span><Link href="/">Home</Link></span>
+                            <span>
+                              <Link href="/">Home</Link>
+                            </span>
                             <span className="current-item">Cases</span>
                           </div>
                         </div>
@@ -93,16 +113,29 @@ export default async function CasesPage() {
                           <div className="row g-0">
                             <div className="col-12 col-xl-9 mxd-grid-item">
                               <div className="inner-headline__title">
-                                <CommonAnimatedText as="h1" className="medium loading-split" animation="splitLinesLoad">
+                                <CommonAnimatedText
+                                  as="h1"
+                                  className="medium loading-split"
+                                  animation="splitLinesLoad"
+                                >
                                   Where strategy <span>becomes systems</span>
                                 </CommonAnimatedText>
                               </div>
                             </div>
                             <div className="col-12 col-xl-3 mxd-grid-item">
                               <div className="inner-headline__tags align-end-desktop tags-medium-title">
-                                {['AI Strategy', 'Automation', 'E-Commerce', 'Knowledge Systems', 'AI Agents', 'Digital Operations'].map((label, index) => (
+                                {[
+                                  "AI Strategy",
+                                  "Automation",
+                                  "E-Commerce",
+                                  "Knowledge Systems",
+                                  "AI Agents",
+                                  "Digital Operations",
+                                ].map((label, index) => (
                                   <CommonLoadItem key={label} index={index}>
-                                    <TextScramble className="tag tag-m meta-tag mxd-scramble loading-item">{label}</TextScramble>
+                                    <TextScramble className="tag tag-m meta-tag mxd-scramble loading-item">
+                                      {label}
+                                    </TextScramble>
                                   </CommonLoadItem>
                                 ))}
                               </div>
@@ -126,32 +159,79 @@ export default async function CasesPage() {
                   <div className="container-fluid p-0">
                     <div className="row g-0 mxd-projects-grid__gallery">
                       {cases.map((item, index) => (
-                        <CommonCardBatchAnimated key={item.slug} className={`case-card-mobile col-12 col-md-6 col-xl-${index % 2 === 0 ? '4' : '7'} mxd-project-item animate-card-2${index % 2 === 0 ? ' mxd-project-item-s mxd-project-item-sticky' : ''}`} as="div" columns={2}>
-                          <Link className="mxd-project-item__media active-cursor-permanent" data-cursor-text="View Case" href={`/cases/${item.slug}`}>
+                        <CommonCardBatchAnimated
+                          key={item.slug}
+                          className={`case-card-mobile col-12 col-md-6 col-xl-${index % 2 === 0 ? "4" : "7"} mxd-project-item animate-card-2${index % 2 === 0 ? " mxd-project-item-s mxd-project-item-sticky" : ""}`}
+                          as="div"
+                          columns={2}
+                        >
+                          <Link
+                            className="mxd-project-item__media active-cursor-permanent"
+                            data-cursor-text="View Case"
+                            href={`/cases/${item.slug}`}
+                          >
                             {index % 2 === 0 ? (
                               <MxdImgAnim
-                                main={<Image className="centered-y" alt={item.title} src={item.featuredImage} width={1280} height={853} />}
+                                main={
+                                  <Image
+                                    className="centered-y"
+                                    alt={item.title}
+                                    src={item.featuredImage}
+                                    width={1280}
+                                    height={853}
+                                  />
+                                }
                                 absolutes={[]}
                               />
                             ) : (
                               <>
-                                <Image alt={item.title} src={item.featuredImage} width={1500} height={1000} />
+                                <Image
+                                  alt={item.title}
+                                  src={item.featuredImage}
+                                  width={1500}
+                                  height={1000}
+                                />
                                 <div className="mxd-cover mxd-cover-06" />
                                 <div className="mxd-project-item__videowrap">
-                                  <AutoplayLoopVideo poster="video/640x360_stone-geometry-banner.webp" sources={[{ type: 'video/mp4', src: 'video/640x360_stone-geometry.mp4' }, { type: 'video/webm', src: 'video/640x360_stone-geometry.webm' }]} />
+                                  <AutoplayLoopVideo
+                                    poster="video/640x360_stone-geometry-banner.webp"
+                                    sources={[
+                                      {
+                                        type: "video/mp4",
+                                        src: "video/640x360_stone-geometry.mp4",
+                                      },
+                                      {
+                                        type: "video/webm",
+                                        src: "video/640x360_stone-geometry.webm",
+                                      },
+                                    ]}
+                                  />
                                 </div>
                               </>
                             )}
                           </Link>
                           <div className="mxd-project-item__caption">
                             <div className="mxd-project-item__name">
-                              <Link className="project-name-s" href={`/cases/${item.slug}`}>{item.title}</Link>
+                              <Link
+                                className="project-name-s"
+                                href={`/cases/${item.slug}`}
+                              >
+                                {item.title}
+                              </Link>
                             </div>
                             <p className="t-medium">{item.excerpt}</p>
                             <div className="mxd-project-item__tags">
-                              {[item.category, ...item.services].filter(Boolean).slice(0, 3).map((tag) => (
-                                <TextScramble key={tag} className="tag tag-s tag-medium mxd-scramble">{tag}</TextScramble>
-                              ))}
+                              {[item.category, ...item.services]
+                                .filter(Boolean)
+                                .slice(0, 3)
+                                .map((tag) => (
+                                  <TextScramble
+                                    key={tag}
+                                    className="tag tag-s tag-medium mxd-scramble"
+                                  >
+                                    {tag}
+                                  </TextScramble>
+                                ))}
                             </div>
                           </div>
                         </CommonCardBatchAnimated>
@@ -165,5 +245,5 @@ export default async function CasesPage() {
         </BlurSection>
       </div>
     </CommonLoadAnimation>
-  )
+  );
 }

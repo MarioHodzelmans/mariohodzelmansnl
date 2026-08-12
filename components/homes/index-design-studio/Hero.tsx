@@ -94,11 +94,13 @@ export default function Hero() {
                       className="t-bold t-permanent loading-split"
                       animation="splitLinesLoad"
                     >
-                      Strategy. Systems. Execution.
+                      I&apos;m Mario Hodzelmans — a digital strategist and
+                      systems thinker.
                       <br />
                       <span>
-                        Helping organizations turn complexity into scalable systems, automation
-                        and digital growth.
+                        This site brings together my work, experiments and ideas
+                        across AI, automation, e-commerce and intelligent
+                        systems.
                       </span>
                     </CommonAnimatedText>
                   </div>
@@ -109,7 +111,7 @@ export default function Hero() {
                         targetId="works"
                       >
                         <TextScramble className="btn-caption mxd-scramble">
-                          Scroll to explore
+                          Explore selected work
                         </TextScramble>
                         <i>
                           <svg
