@@ -20,6 +20,7 @@
     "@payloadcms/richtext-lexical": "^3.85.0",
     "@payloadcms/ui": "^3.85.0",
     "@phosphor-icons/web": "^2.1.2",
+    "@puckeditor/core": "0.22.3",
     "@types/matter-js": "^0.20.2",
     "bootstrap": "^5.3.8",
     "cross-env": "^7.0.3",
