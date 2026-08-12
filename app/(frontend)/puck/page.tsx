@@ -8,6 +8,11 @@ import PuckEditorClient, { defaultPuckData } from './PuckEditorClient'
 
 export const dynamic = 'force-dynamic'
 
+type PuckPageDocument = {
+  id: number | string
+  puckData?: Data
+}
+
 export default async function PuckEditorPage() {
   const payload = await getPayload({ config })
   const headers = await getHeaders()
@@ -17,8 +22,11 @@ export default async function PuckEditorPage() {
     redirect('/admin/login?redirect=/puck')
   }
 
+  // Payload's generated declaration file is updated separately from the runtime config.
+  // Cast the new collection slug here so this isolated feature can build before generated
+  // types are regenerated, while keeping the returned document shape explicit below.
   const existing = await payload.find({
-    collection: 'puck-pages',
+    collection: 'puck-pages' as never,
     where: {
       slug: {
         equals: 'home',
@@ -29,8 +37,8 @@ export default async function PuckEditorPage() {
     user,
   })
 
-  const document = existing.docs[0]
-  const initialData = (document?.puckData as Data | undefined) ?? defaultPuckData
+  const document = existing.docs[0] as unknown as PuckPageDocument | undefined
+  const initialData = document?.puckData ?? defaultPuckData
 
   return <PuckEditorClient initialData={initialData} documentId={document?.id ? String(document.id) : undefined} />
 }
